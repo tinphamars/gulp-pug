@@ -9,7 +9,7 @@ const browserSync = require("browser-sync").create();
 const FilesPath = {
   scssFiles: "sass/*.scss",
   jsFiles: "js/*.js",
-  htmlFiles: "pages/*.pug",
+  htmlFiles: "pages/**/*.pug",
   assets: "img/**",
 };
 
