@@ -1,0 +1,45 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Flight Promo code search list")
+
+  body
+    section.main
+      +headers("Chương trình khuyến mãi", "")
+
+      include includes/search-title.pug
+
+      include includes/promo/list.pug
+      include includes/add.pug
+
+    include includes/crypto/modal-confirm-active.pug
+    .offcanvas.offcanvas-bottom.offcanvas-with-radius#offcanvasBottomEdit(style="z-index: 1111; height: auto;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
+      .offcanvas-body.small
+        .text-center
+          img(src="assets/img/line-width-50.png", alt="line x")
+        ul.list-group.list-group-flush.color-bl.fw-600.mt-2
+          li.list-group-item.text-center.p-3 Chỉnh sửa
+          li.list-group-item.text-center.p-3 Xem
+          li.list-group-item.text-center.p-3 Tạo bản sao
+          li.list-group-item.text-center.p-3 xoá
+
+    include includes/promo/modal-search.pug
+    include includes/js.pug
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

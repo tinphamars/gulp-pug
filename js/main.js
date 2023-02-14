@@ -1,1 +1,0 @@
-const tinpham = 1000;

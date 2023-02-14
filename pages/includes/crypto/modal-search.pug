@@ -1,0 +1,57 @@
+.modal.fade#modal-search(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+  .modal-dialog.modal-fullscreen
+    .modal-content.modal-search
+      .modal-search-header.d-flex.justify-content-between.align-items-center
+        img(src="/assets/img/back.png", data-bs-dismiss="modal", aria-label="Close")
+        .center 
+          span Tìm kiếm
+        .right 
+          span Xóa bộ lọc
+      .modal-body
+        form(action="")
+          .mb-4
+            .mb-3.position-relative
+              input.form-control.form-control-root.none-right-border(type="text", aria-label="Text input with dropdown button")
+              div.btn-tin(type="button", data-bs-toggle="dropdown", aria-expanded="false") 
+                div.btn-left
+                  //- img.position-relative(src="assets/img/caret-down.png", alt="alt")
+              .dropdown-menu
+                .p-3
+                  input.form-control.form-control-root(type="text" placeholder="Nhập mã cần tìm")
+                ul.custom-dropdown-item.dropdown-menu-end.p-3(style="width: calc(100vw - 36px);")
+                  li
+                    span.dropdown-item(href="#") Tất cả
+                  li
+                    hr.dropdown-divider
+                  li
+                    span.dropdown-item(href="#") BTC
+                  li
+                    hr.dropdown-divider
+                  li
+                    span.dropdown-item(href="#") ETH
+                  li
+                    hr.dropdown-divider
+                  li
+                    span.dropdown-item(href="#") USDT
+                  li
+                    hr.dropdown-divider
+                  li
+                    span.dropdown-item(href="#") BNB
+                  li
+                    hr.dropdown-divider
+                  li
+                    span.dropdown-item(href="#") BUSD
+
+          .mb-4
+            label.form-label(for="exampleInputEmail1") Tên Crypto
+            input.form-control.form-control-root(type="text", placeholder="Tên Crypto")
+          .mb-4
+            label.form-label(for="exampleInputEmail1") Trạng thái
+            .form-select-control-root
+              select.form-select
+                option(selected) Tất cả
+                option(value="1") Active
+                option(value="2") UnActive
+          button.btn.btn-in.w-100(type="submit")
+            img(src="assets/img/search-in-button.png")
+            span Tìm kiếm

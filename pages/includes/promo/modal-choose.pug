@@ -1,0 +1,34 @@
+mixin promoCodeModal(titleModal, holder, idModal)
+  .offcanvas.offcanvas-bottom.offcanvas-with-radius(id=idModal, style="z-index: 1111; height:auto; max-height: 80vh;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
+      .offcanvas-body
+        .text-center
+          img(src="assets/img/line-width-50.png", alt="line x")
+          div.mt-3
+            h3.fw-600.font-16.color-bl=titleModal
+          .d-flex.justify-content-between.align-items-center.mb-3
+            span.color-bl Đã chọn: 3
+            span.text-main.fw-600 Xoá hết
+          .mb-3
+            input.form-control.form-control-root#cryptoInputText2(type="text", placeholder=holder)
+
+          ul.list-group.list-group-flush
+            li.list-group-item 
+              .d-flex.justify-content-between.align-items-center
+                span Tất cả 
+                .form-check
+                  input.form-check-input#flexCheckDefault(type="checkbox")
+            li.list-group-item 
+              .d-flex.justify-content-between.align-items-center
+                span Tất cả 
+                .form-check
+                  input.form-check-input#flexCheckDefault(type="checkbox")
+            li.list-group-item 
+              .d-flex.justify-content-between.align-items-center
+                span Tất cả 
+                .form-check
+                  input.form-check-input.form-container-lg#flexCheckDefault(type="checkbox")
+            li.list-group-item 
+              .d-flex.justify-content-between.align-items-center
+                span Tất cả 
+                .form-check
+                  input.form-check-input#flexCheckDefault(type="checkbox")

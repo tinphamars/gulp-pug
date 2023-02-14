@@ -1,0 +1,34 @@
+mixin promoItem(className, activeTitle)
+  .card-crypto.mb-3.bg-gray.border.p-3.bd-5px
+    .d-flex.justify-content-between.align-items-center.mb-4
+      .form-check.form-switch.padding-r-15
+        input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch")
+      a.font-16.text-main.fw-600.text-decoration-none(href="#") 08032022 - H-VNPHUNU83
+      img(src="assets/img/3-dot.png", style="padding:10px 0px 10px 10px;" data-bs-toggle="offcanvas", data-bs-target="#offcanvasBottomEdit", aria-controls="offcanvasBottom")
+
+    .d-flex.justify-content-between.align-items-center.mb-4
+      span.font-16.fw-600.color-bl Lorem, ipsum dolor.
+      button(class=className)=activeTitle
+
+    a.d-block.text-decoration-none(href="#")
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Mã khuyến mãi:
+        span.text-black.fw-600 PHUNU83
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Loại khuyến mãi:
+        span.text-black.fw-600 Huy Khang
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-3
+        span.fw-500 Quốc gia:
+        span.text-black.fw-600 VietNam
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-3
+        span.fw-500 Ngày bắt đầu:
+        span.text-black.fw-600 01/03/2022 - 08:50 AM
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-3
+        span.fw-500 Ngày kết thúc:
+        span.text-black.fw-600 01/03/2022 - 08:50 AM
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-3
+        span.fw-500 Số lượng:
+        span.text-black.fw-600 200
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-3
+        span.fw-500 Người tạo:
+        span.text-black.fw-600 Admin

@@ -1,0 +1,175 @@
+include includes/header-detail.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Hotel promo code detail page")
+  
+  body
+    section.main
+      +headerDetail('Chi tiết khuyến mãi')
+      
+      .w-with-padding.mb-sub-button
+
+        .mt-3.mb-3
+          span.fw-600.color-bl Thông tin khuyến mãi
+
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Người tạo:
+          span.color-bl.fw-600 Admin
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Phân hệ:
+          span.color-bl.fw-600 Hotel
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Loại khuyến mãi:
+          span.color-bl.fw-600 Promo code
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Mã chương trình:
+          span.color-bl.fw-600 08032022-H-VNSUMVAY
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Trạng thái:
+          span.fw-600.color-refurn Inactive
+        span.d-block.mb-2 Nội dung khuyến mãi: 
+        .border.border-1.rounded.p-3.mb-3
+          span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
+      
+        span.d-block.mb-2.color-bl Hình ảnh cover
+        div.mb-3
+          img.rounded-1(src="/assets/img/promo-detail.png", width="240" alt="promo detail")   
+        span.d-block.mb-2.color-bl Hình ảnh logo
+        div
+          img(src="/assets/img/promo-detail-logo.png", width="108" alt="promo detail")   
+
+        hr.my-4
+      
+        h2.font-16.fw-600.mb-3.color-bl Thiết lập mã khuyến mãi
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Đường dẫn hiển thị:
+          span.color-bl.fw-600 https://admin.com
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Ngày bắt đầu:
+          span.color-bl.fw-600 20/05/2022 - 02:00 AM
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Ngày kết thúc:
+          span.color-bl.fw-600 20/05/2022 - 02:00 PM
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Số lượng phát hành:
+          span.color-bl.fw-600 500.000.000
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Giới hạn sử dụng trong ngày
+          span.color-bl.fw-600 2.000
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Mức giảm giá theo %
+          span.color-bl.fw-600 0
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Mức giảm tối đa
+          span.color-bl.fw-600 0 VND
+        span.d-block.mb-2 Nội dung khuyến mãi: 
+        .border.border-1.rounded.p-3.mb-3
+          span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
+        
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Đối tác thanh toán:
+          div 
+            .btn.btn-city.font-12 VCB
+            .btn.btn-city.font-12 ACB
+            .btn.btn-city.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListPartnerPayment", aria-controls="offcanvasBottom") +10
+
+        hr.my-4
+
+        h2.font-16.fw-600.mb-3.color-bl Điều kiện áp dụng đơn hàng
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Quốc gia du lịch:
+          span.color-bl.fw-600 Việt Nam
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Thành phố:
+          div 
+            .btn.btn-city.font-12 Hồ Chí Minh
+            .btn.btn-city.font-12 Hà Nội
+            .btn.btn-city.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListCity", aria-controls="offcanvasBottom") +10
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Ngày bắt đầu:
+          span.color-bl.fw-600 20/05/2022 - 02:00 AM
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Ngày kết thúc:
+          span.color-bl.fw-600 20/05/2022 - 02:00 PM
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Số lượng phát hành:
+          span.color-bl.fw-600 500.000.000
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Giới hạn sử dụng trong ngày
+          span.color-bl.fw-600 2.000
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Mức giảm giá theo %
+          span.color-bl.fw-600 0
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Mức giảm tối đa
+          span.color-bl.fw-600 0 VND
+        span.d-block.mb-2 Nội dung khuyến mãi: 
+        .border.border-1.rounded.p-3.mb-3
+          span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
+
+      .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+        .row
+          .col-6
+            a(href="#")
+              button.btn.w-100.btn-blue.btn-h-48 Chỉnh sửa
+          .col-6
+            a(href="#")
+              button.btn.w-100.btn-outline-secondary.btn-h-48 Đóng
+
+    .offcanvas.offcanvas-bottom.offcanvas-with-radius#offcanvasListCity(style="z-index: 1111;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
+      .offcanvas-body.small
+        .text-center
+          img(src="assets/img/line-width-50.png", alt="line x")
+          div.mt-3
+            h3.fw-600.font-16.color-bl Thành phố
+        .mt-3
+          .btn.btn-city.font-12.mb-2 Hồ Chí Minh
+          .btn.btn-city.font-12.mb-2 Hà Nội
+          .btn.btn-city.font-12.mb-2 Hải Phòng
+          .btn.btn-city.font-12.mb-2 Đà Lạt
+          .btn.btn-city.font-12.mb-2 Cần Thơ
+          .btn.btn-city.font-12.mb-2 Vũng Tàu
+    
+    .offcanvas.offcanvas-bottom.offcanvas-with-radius#offcanvasListPartnerPayment(style="z-index: 1111; height:auto; max-height:80vh;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
+      .offcanvas-body.color-bl
+        .text-center.mb-4
+          img(src="assets/img/line-width-50.png", alt="line x")
+          div.mt-3
+            h3.fw-600.font-16 Đối tác thanh toán
+        .mb-3
+          .d-flex.align-items-center
+            img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
+            div.text-start
+              span.fw-600.d-block VietComBank
+              span.font-12 Ngân hàng TMCP Ngoại thương Việt Nam
+        .mb-3
+          .d-flex.align-items-center
+            img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
+            div.text-start
+              span.fw-600.d-block VietComBank
+              span.font-12 Ngân hàng TMCP Ngoại thương Việt Nam
+        .mb-3
+          .d-flex.align-items-center
+            img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
+            div.text-start
+              span.fw-600.d-block VietComBank
+              span.font-12 Ngân hàng TMCP Ngoại thương Việt Nam
+
+    include includes/js.pug
+
+
+
+
+
+
+
+
+
+
+
+
+
+

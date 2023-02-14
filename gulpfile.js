@@ -7,15 +7,15 @@ const pug = require("gulp-pug");
 const browserSync = require("browser-sync").create();
 
 const FilesPath = {
-  scssFiles: "sass/*.scss",
-  jsFiles: "js/*.js",
-  htmlFiles: "pages/**/*.pug",
-  assets: "img/**",
+  scssFiles: "pages/**/css/*.scss",
+  jsFiles: "pages/assets/js/*.js",
+  htmlFiles: "pages/*.pug",
+  assets: "pages/**/img/**",
 };
 
 function htmlTask() {
   return src(FilesPath.htmlFiles)
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({ pretty: true, force: true }))
     .pipe(dest("dist"))
     .pipe(browserSync.stream());
 }
@@ -23,35 +23,34 @@ function htmlTask() {
 function sassTask() {
   return src(FilesPath.scssFiles)
     .pipe(sass({ outputStyle: "compressed" }))
-    .pipe(concat("style.css"))
-    .pipe(dest("dist/css"))
+    .pipe(concat("all.css"))
+    .pipe(dest("dist/assets/css"))
     .pipe(browserSync.stream());
 }
 
 function jsTask() {
   return src(FilesPath.jsFiles)
-    .pipe(concat("all.js"))
-    .pipe(dest("dist/js"))
+    .pipe(concat("main.js"))
+    .pipe(dest("dist/assets/js"))
     .pipe(browserSync.stream());
 }
 
 function assetsTask() {
-  return src(FilesPath.assets)
-    .pipe(dest("dist/assets/img"))
-    .pipe(browserSync.stream());
+  return src(FilesPath.assets).pipe(dest("dist")).pipe(browserSync.stream());
 }
 
 function serve() {
-  browserSync.init({ server: { baseDir: "./dist" } });
+  browserSync.init({ server: { baseDir: "./dist", directory: true } });
   watch(FilesPath.htmlFiles, htmlTask);
   watch(FilesPath.scssFiles, sassTask);
-  watch(FilesPath.assets, assetsTask);
   watch(FilesPath.jsFiles, jsTask);
+  watch(FilesPath.assets, assetsTask);
+  watch('pages/**/*.pug', htmlTask);
 }
 
 exports.js = jsTask;
 exports.sass = sassTask;
 exports.html = htmlTask;
 exports.assets = assetsTask;
-exports.default = series(parallel(htmlTask, sassTask, assetsTask));
+exports.default = series(parallel(htmlTask, sassTask, assetsTask, jsTask));
 exports.watch = serve;

@@ -1,0 +1,20 @@
+mixin headers(title, subTitle)
+  .sticky-top.bg-white
+    .header.d-flex.justify-content-between.pt-5.w-with-padding
+      .header-left.d-flex.align-items-center
+        a(href="#") 
+          button.menu(data-bs-toggle="offcanvas" data-bs-target="#offcanvasmainmenu" aria-controls="offcanvasmainmenu")
+            img(src="assets/img/menu.png")
+        .title
+          span=title
+          if subTitle
+            .color-gray.font-14.fw-normal=subTitle
+      .header-right.d-flex.align-items-center
+        button.menu(data-bs-toggle="modal" data-bs-target="#modal-search" aria-controls="modal-search")
+          img(src="assets/img/Search.png")
+        .bell
+          img(src="assets/img/Bell.png")
+          .number 19
+    hr.my-4.w-100
+
+

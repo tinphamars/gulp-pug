@@ -1,0 +1,40 @@
+mixin text(label, required, placeholder)
+  label.form-label(for="cryptoInputText2")=label
+    if required
+      span.text-danger  *
+  input.form-control.form-control-root#cryptoInputText2(type="text", placeholder=placeholder)
+
+mixin date(label, required)
+  label.form-label(for="cryptoInputText2")=label
+    if required
+      span.text-danger  *
+  input.form-control.form-control-root#cryptoInputText2(type="date")
+
+mixin select(label, required)
+  label.form-label(for="cryptoInputText2")=label
+    if required
+      span.text-danger  *
+  select.form-select.form-control-root(aria-label="Default select example")
+    option(selected) Select name 1
+    option(value="1") Select name 2
+
+mixin radio(label)
+  .form-check
+    input.form-check-input#flexRadioDefault_route_2(type="radio", name="flexRadioDefaultName_route")
+    label.form-check-label(for="flexRadioDefault_route_2")=label
+
+mixin checkbox(label, required)
+  .form-check
+    label.form-check-label=label
+    if required
+        span.text-danger  *
+    input.form-check-input(type="checkbox")
+
+mixin textarea(label, rows, required, countText, placeholder )
+  label.form-label=label
+  if required
+    span.text-danger  *
+  textarea.form-control(rows=rows, placeholder=placeholder)
+  if countText
+    .text-end.mt-1 
+      span.color-gray 0/100

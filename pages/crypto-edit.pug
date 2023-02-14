@@ -1,0 +1,83 @@
+include includes/header-detail.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Crypto detail page
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous')
+    link(href="assets/css/all.css" rel="stylesheet")
+  body
+    section.main
+      +headerDetail('Chỉnh sửa Crypto Currency')
+      .w-with-padding.mt-3.color-bl
+        form(action="") 
+          .mb-3
+            label.form-label(for="cryptoInputText1") Mã Crypto
+              span.text-danger  *
+            input.form-control.form-control-root#cryptoInputText1(type="text", aria-describedby="textHelp")
+
+          .mb-3
+            label.form-label(for="cryptoInputText2") Tên Crypto
+              span.text-danger  *
+            input.form-control.form-control-root#cryptoInputText2(type="text", aria-describedby="textHelp")
+          
+          .mb-3
+            label.form-label(for="cryptoInputText3") Phí chênh lệch (%)
+            .form-input-control
+              input.form-control.form-control-root#cryptoInputText3(type="text", aria-describedby="textHelp" disabled="true") 
+              div.text-end-input 
+                span USD
+
+          .mb-3
+            label.form-label(for="cryptoInputText4") Phí chênh lệch (%)
+            .form-input-control
+              input.form-control.form-control-root#cryptoInputText4(type="text", aria-describedby="textHelp") 
+              div.text-end-input 
+                span % 
+
+          .mb-3
+            label.form-label(for="cryptoInputEmail5") Trạng thái thanh toán
+            .form-input-control
+              input.form-control.form-control-root#cryptoInputText5(type="text", aria-describedby="textHelp" disabled="true" value="31.791") 
+              div.text-end-input 
+                span USD
+
+          .mb-3
+            .d-flex.flex-column.align-items-start.mb-3
+              label.form-label(for="cryptoInputEmail5") Logo
+                span.text-danger  *
+              span.font-12.mb-2.color-gray Dimension (500x500) Max 500KB
+              img(src="/assets/img/crypto-detail.png", alt="crypto")
+            .d-block
+              input#inputGroupFile02(type="file" hidden="true")
+              label.input-group-text.btn.btn-img-upload.fw-600(for="inputGroupFile02")
+                img.padding-r-10(src="assets/img/add-img.png", alt="") 
+                span Tải ảnh
+          
+          .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+            .row
+              .col-6
+                button.btn.w-100.btn-outline-primary.btn-h-48 Hủy     
+              .col-6
+                button.btn.w-100.btn-blue.btn-h-48 Chỉnh sửa         
+
+
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
+    script(src="assets/js/main.js")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

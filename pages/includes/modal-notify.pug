@@ -1,0 +1,14 @@
+.modal.fade#modal-notify(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered.modal-sm-custom
+    .modal-content
+      .modal-body(style="padding: 35px 16px") 
+        .d-block.text-center.fw-600.font-16
+          span.text-error Bạn có chắc muốn thoát?
+          br
+          span.color-bl Sau khi xác nhận thoát các trường thông tin đã nhập sẽ không được lưu lại
+
+        .row.mt-4.fw-600
+          .col-6
+            button.btn.btn-error.w-100(data-bs-dismiss="modal" aria-label="Close") Thoát
+          .col-6
+            button.btn.btn-green.w-100.h-100 Ở lại
