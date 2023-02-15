@@ -1,0 +1,17 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Country list | HYO")
+
+  body
+    section.main
+      +headers('Tỉnh/Thành phố')
+      include includes/country/city-list.pug
+
+    include includes/crypto/modal-search.pug
+    include includes/crypto/modal-confirm-active.pug
+    include includes/js.pug
+

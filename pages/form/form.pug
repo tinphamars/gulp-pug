@@ -38,3 +38,11 @@ mixin textarea(label, rows, required, countText, placeholder )
   if countText
     .text-end.mt-1 
       span.color-gray 0/100
+
+mixin switchButton()
+  .form-check.form-switch.padding-r-15
+    input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch")
+
+mixin buttonEnd(textButton)
+  .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+    button.btn.w-100.btn-blue.btn-h-48=textButton

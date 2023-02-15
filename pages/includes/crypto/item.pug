@@ -1,3 +1,5 @@
+include ../../form/form.pug
+
 .card-crypto.mb-3.bg-gray.border.p-3.bd-5px
   .d-flex.justify-content-between.align-items-center.mb-4
     .cryp-head-left.d-flex.justify-content-start.align-items-center
@@ -6,8 +8,7 @@
         span.fw-600.color-bl Bitcoin
         span.fw-600.text-main BTC
     .cryp-head-right.d-flex.align-items-center
-      .form-check.form-switch.padding-r-15
-        input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch")
+      +switchButton()
       a(href="/crypto-edit.html") 
         img(src="assets/img/edit-icon.png")
   a.d-block.text-decoration-none(href="#")

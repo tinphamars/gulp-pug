@@ -1,0 +1,18 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("District list | HYO")
+
+  body
+    section.main
+      +headers('Quận/huyện')
+      include includes/country/district-list.pug
+      include includes/add.pug
+
+    include includes/crypto/modal-search.pug
+    include includes/crypto/modal-confirm-active.pug
+    include includes/js.pug
+

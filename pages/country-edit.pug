@@ -1,0 +1,45 @@
+include includes/header-detail.pug
+include includes/style.pug
+include form/form.pug
+
+doctype html
+html(lang="en")
+
+  +docType("Country Edit Page")
+
+  body
+    section.main
+      +headerDetail('Thông tin quốc gia')
+
+      .w-with-padding.mt-3.color-bl
+        form(action="") 
+          .mb-3
+            +text('Tên quốc gia (VI)', true, 'Việt Nam')
+
+          .mb-3
+            +text('Tên quốc gia (EN)', true, 'Vietnamese')
+          
+          .mb-3
+           +text('Mã quốc gia', true, '+84')
+
+          .mb-3
+            +text('Mã vùng', true, 'vi')
+      
+          +buttonEnd('Cập nhật')
+
+    include includes/js.pug
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

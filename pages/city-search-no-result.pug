@@ -1,0 +1,16 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+ 
+  +docType("City search list")
+ 
+  body
+    section.main
+      +headers("Tỉnh/Thành phố", "")
+      include includes/search-no-result.pug
+
+    include includes/promo/modal-search.pug
+    include includes/js.pug
+

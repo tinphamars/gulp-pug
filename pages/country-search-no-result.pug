@@ -1,0 +1,16 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+ 
+  +docType("Country search list")
+ 
+  body
+    section.main
+      +headers("Quốc gia", "")
+      include includes/search-no-result.pug
+
+    include includes/promo/modal-search.pug
+    include includes/js.pug
+

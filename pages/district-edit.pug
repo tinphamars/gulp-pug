@@ -1,0 +1,48 @@
+include includes/header-detail.pug
+include includes/style.pug
+include form/form.pug
+
+doctype html
+html(lang="en")
+
+  +docType("Country Edit Page")
+
+  body
+    section.main
+      +headerDetail('Thông tin Quận huyện')
+
+      .w-with-padding.mt-3.color-bl
+        form(action="") 
+          .mb-3
+            +text('Tên quận huyện (VI)', true, 'Quận 1')
+
+          .mb-3
+            +text('Tên quận huyện (EN)', true, 'District 1')
+          
+          .mb-3
+           +text('Mã quận huyện', true, 'QBĐ')
+          
+          .mb-3
+            +select('Thành phố', true)
+
+          .mb-3
+            +select('Quốc gia', true)
+      
+          +buttonEnd('Cập nhật')
+
+    include includes/js.pug
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

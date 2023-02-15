@@ -1,0 +1,33 @@
+include ../../form/form.pug
+
+mixin item(number, countryName, code, phone) 
+  .card-crypto.mb-3.bg-gray.border.p-3.bd-5px
+    .d-flex.justify-content-between.align-items-center.mb-4
+      .cryp-head-left
+        +switchButton()
+      span.fw-600.text-main=countryName
+      .cryp-head-right
+        a(href="/crypto-edit.html") 
+          img(src="assets/img/edit-icon.png")
+    a.d-block.text-decoration-none(href="#")
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        if number == 1 
+          span.fw-500 Mã quốc gia
+        else if number == 2  
+          span.fw-500 Mã tỉnh/thành phố
+        else 
+          span.fw-500 Mã quận huyện
+        span.text-black.fw-600=code
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        if number == 1 
+          span.fw-500 Mã vùng
+        else if number == 2  
+          span.fw-500 Quốc gia
+        else 
+          span.fw-500 Tỉnh/ Thành Phố
+        span.text-black.fw-600=phone
+      if number == 3
+        .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+          span.fw-500 Quốc gia
+          span.text-black.fw-600 Việt Nam
+
