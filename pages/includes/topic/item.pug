@@ -1,0 +1,24 @@
+mixin topicItem(activeTrue)
+  .card-crypto.mb-3.bg-gray.border.p-3.bd-5px
+    .d-flex.justify-content-between.align-items-center.mb-4
+      a.font-16.text-main.fw-600.text-decoration-none(href="#") 01: Chủ đề DDH Hà Nội
+      .form-check.form-switch
+        if activeTrue
+          input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch" checked="true")
+        else 
+          input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch")
+
+    a.d-block.text-decoration-none(href="#")
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Danh mục:
+        span.text-black.fw-600 Quốc gia nổi tiếng
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Người tạo:
+        span.text-black.fw-600 Admin
+
+    .text-end 
+      button.text-main.fw-600.border-0.bg-flight(data-bs-toggle="modal", data-bs-target="#modalTopicEdit", aria-controls="modalBottom")
+        .d-flex.align-items-center.justify-content-end
+          img.padding-r-15(src="assets/img/icon-edit.png")
+          span Chỉnh sửa
+      

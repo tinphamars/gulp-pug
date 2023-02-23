@@ -2,8 +2,7 @@ var inputName = document.getElementsByName("flexRadioDefaultName_discount");
 if (inputName && inputName.length > 0) {
   Array.from(inputName).forEach((itemInputDiscount) => {
     itemInputDiscount.addEventListener("change", (event) => {
-      var discountPercent =
-        document.getElementsByClassName("discount-percent");
+      var discountPercent = document.getElementsByClassName("discount-percent");
       var discountNumber = document.getElementsByClassName("discount-number");
       if (event.target.value == 1) {
         discountPercent[0].classList.remove("show-discount");
@@ -27,7 +26,6 @@ textareaForm &&
     textareaForm.setAttribute("rows", "5");
   });
 // end focus event
-
 
 // modal when change active field
 var cryptoActive = document.getElementsByClassName("crypto-active");

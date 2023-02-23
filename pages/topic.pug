@@ -1,0 +1,21 @@
+include includes/header.pug
+include includes/style.pug
+include includes/country/modal-search.pug
+include includes/topic/modal-search.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Topic list | HYO")
+
+  body
+    section.main
+      +headers('Danh sách chủ đề', '(37 chủ đề)')
+      include includes/topic/list.pug
+      include includes/topic/add.pug
+
+    +modalSearchLocal('Tìm kiếm ')
+    include includes/crypto/modal-confirm-active.pug
+    include includes/topic/modal-edit.pug
+    include includes/js.pug
+

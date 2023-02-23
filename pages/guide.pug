@@ -1,19 +1,18 @@
 include includes/header.pug
 include includes/style.pug
-include includes/country/modal-search.pug
 
 doctype html
 html(lang="en")
   
-  +docType("District list | HYO")
+  +docType("Hướng dẫn và mẹo du lịch | HYO")
 
   body
     section.main
-      +headers('Quận/huyện')
-      include includes/country/district-list.pug
+      +headers('Hướng dẫn và mẹo du lịch', '(11 bài viết)')
+      include includes/guide/list.pug
       include includes/add.pug
-    
-    +modalSearchLocal('Tra cứu quận/huyện', 3)
+
     include includes/crypto/modal-confirm-active.pug
+    include includes/guide/modal-search.pug
     include includes/js.pug
 

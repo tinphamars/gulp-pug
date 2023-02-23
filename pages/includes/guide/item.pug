@@ -1,0 +1,39 @@
+mixin guideItem(activeTrue)
+  .card-crypto.mb-3.bg-gray.border.p-3.bd-5px
+    .d-flex.justify-content-between.align-items-center.mb-4
+      a.font-16.text-main.fw-600.text-decoration-none(href="#") 01: Chủ đề DDH Hà Nội
+      .form-check.form-switch
+        if activeTrue
+          input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch" checked="true")
+        else 
+          input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch")
+
+    a.d-block.text-decoration-none.mb-3(href="#")
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Chủ đề:
+        span.text-black.fw-600 Topic-Hotel-HD-MDL-1
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Quốc gia:
+        span.text-black.fw-600 Việt Nam
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Ngôn ngữ:
+        span.text-black.fw-600 Tiếng Việt
+      .d-flex.justify-content-between.align-items-start.color-gray.mb-2
+        span.fw-500 Người tạo:
+        .text-end
+          span.text-black.fw-600 Admin
+          br
+          span.font-12 22-09-2022 10:00:58
+      .d-flex.justify-content-between.align-items-start.color-gray
+        span.fw-500 Cập nhật:
+        .text-end
+          span.text-black.fw-600 Admin V2
+          br
+          span.font-12 22-09-2022 10:00:58
+
+    .text-end 
+      a.text-main.fw-600.text-decoration-none(href="#")
+        .d-flex.align-items-center.justify-content-end
+          img.padding-r-15(src="assets/img/icon-edit.png")
+          span Chỉnh sửa
+      

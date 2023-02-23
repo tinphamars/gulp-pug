@@ -1,0 +1,21 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Hướng dẫn và mẹo du lịch | HYO")
+
+  body
+    section.main
+      +headers("Hướng dẫn và mẹo du lịch", "")
+      include includes/search-no-result.pug
+      include includes/add.pug
+
+    include includes/guide/modal-search.pug
+    include includes/js.pug
+
+
+
+
+

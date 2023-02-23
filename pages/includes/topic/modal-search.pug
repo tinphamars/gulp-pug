@@ -1,0 +1,22 @@
+include ../../form/form.pug
+mixin modalSearchLocal(titleSearch)
+  .modal.fade#modal-search(tabindex="-1", aria-labelledby="exampleModalLabel", aria-modal="true", role="dialog")
+    .modal-dialog.modal-fullscreen
+      .modal-content.modal-search
+        .modal-search-header.d-flex.justify-content-between.align-items-center
+          img(src="assets/img/back.png", data-bs-dismiss="modal", aria-label="Close")
+          .center=titleSearch
+          .right Xóa bộ lọc
+        .modal-body
+          form
+            .mb-3
+              +text('Chủ đề', true)
+            .mb-3
+              +select('Danh mục', false)
+            .mb-3
+              +select('Trạng thái bài viết', false)
+           
+          .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+            button.btn.btn-in.w-100(type="submit")
+              img(src="assets/img/search-in-button.png")
+              span Tìm kiếm

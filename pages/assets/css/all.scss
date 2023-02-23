@@ -6,28 +6,8 @@
   --color-danger: #dc3545;
 }
 
-html {
+body {
   font-size: 14px;
-  font-family: "Montserrat", sans-serif;
-  color: #888888;
-}
-
-#container {
-  font-family: "Montserrat", sans-serif;
-  color: #888888;
-}
-
-.offcanvas {
-  font-family: "Montserrat", sans-serif;
-  color: #888888;
-}
-
-.modal {
-  font-family: "Montserrat", sans-serif;
-  color: #888888;
-}
-
-.main {
   font-family: "Montserrat", sans-serif;
   color: #888888;
 }
@@ -58,8 +38,8 @@ html {
 }
 .form-select-control-root select {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   outline: 0;
   border: 1px solid #ced4da;
   box-shadow: none;
@@ -210,6 +190,7 @@ html {
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
 }
 .pt-24px {
@@ -499,7 +480,7 @@ html {
 
 .add-new {
   padding: 11px 8px;
-  background: #0770CD;
+  background: #0770cd;
   border-radius: 100%;
 }
 
@@ -509,18 +490,18 @@ html {
 
 .btn-city {
   padding: 4px 10px;
-  background: #0770CD;
-  color: #FFFFFF;
+  background: #0770cd;
+  color: #ffffff;
 }
 
 ::-webkit-calendar-picker-indicator {
   padding-left: 10px;
-  border-left: 1px solid #E1E1E1;
+  border-left: 1px solid #e1e1e1;
 }
 
 ::-webkit-calendar-picker-indicator {
   padding-left: 10px;
-  border-left: 1px solid #E1E1E1;
+  border-left: 1px solid #e1e1e1;
 }
 
 .form-select {
@@ -566,10 +547,10 @@ html {
 }
 
 .promo-code-if {
-  border: 1px solid #3982D1;
+  border: 1px solid #3982d1;
   border-radius: 3px;
   padding: 30px 20px;
-  border-left: 10px solid #3982D1;
+  border-left: 10px solid #3982d1;
 }
 
 .modal .modal-body .collapsed img.round-auto {
@@ -577,7 +558,7 @@ html {
 }
 
 .color-green-70 {
-  color: #0D276E;
+  color: #0d276e;
 }
 
 .font-14 {
@@ -702,7 +683,8 @@ html {
   color: #329223;
 }
 .modal .children-item.active img {
-  filter: invert(35%) sepia(69%) saturate(6259%) hue-rotate(87deg) brightness(93%) contrast(94%);
+  filter: invert(35%) sepia(69%) saturate(6259%) hue-rotate(87deg)
+    brightness(93%) contrast(94%);
 }
 
 .modal-search {
@@ -860,7 +842,8 @@ html {
   color: #329223;
 }
 .offcanvas-menu .offcanvas-body .list-group-item .children-item.active img {
-  filter: invert(35%) sepia(69%) saturate(6259%) hue-rotate(87deg) brightness(93%) contrast(94%);
+  filter: invert(35%) sepia(69%) saturate(6259%) hue-rotate(87deg)
+    brightness(93%) contrast(94%);
 }
 .offcanvas-menu .offcanvas-footer {
   margin: 15px;
@@ -878,8 +861,10 @@ html {
 }
 .offcanvas-menu .offcanvas-footer img {
   padding-right: 20px;
-}/*# sourceMappingURL=all.css.map */
+} /*# sourceMappingURL=all.css.map */
 
-
-
-
+.img-close-modal {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
