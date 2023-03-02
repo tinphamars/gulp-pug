@@ -1,8 +1,8 @@
 mixin text(label, required, placeholder)
-  label.form-label(for="cryptoInputText2")=label
+  label.form-label=label
     if required
       span.text-danger  *
-  input.form-control.form-control-root#cryptoInputText2(type="text", placeholder=placeholder)
+  input.form-control.form-control-root(type="text", placeholder=placeholder)
 
 mixin date(label, required)
   label.form-label(for="cryptoInputText2")=label
@@ -27,7 +27,7 @@ mixin checkbox(label, required)
   .form-check
     label.form-check-label=label
     if required
-        span.text-danger  *
+      span.text-danger  *
     input.form-check-input(type="checkbox")
 
 mixin textarea(label, rows, required, countText, placeholder )
@@ -46,3 +46,21 @@ mixin switchButton()
 mixin buttonEnd(textButton)
   .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
     button.btn.w-100.btn-blue.btn-h-48=textButton
+
+mixin img(label, required, sub)
+  .d-flex.flex-column.align-items-start.mb-2
+    label.form-label.mb-0(for="cryptoInputEmail5")=label
+      if required
+        span.text-danger  *
+    span.font-12.color-gray=sub
+  .d-block
+    input#inputGroupFile02(type="file" hidden="true")
+    label.input-group-text.btn.btn-img-upload.fw-600(for="inputGroupFile02")
+      img.padding-r-10(src="assets/img/add-img.png", alt="") 
+      span Tải ảnh
+
+mixin textFocus(label, required, placeholder)
+  label.form-label=label
+    if required
+      span.text-danger  *
+  input.form-control.form-control-root.focus-show-modal(type="text", placeholder=placeholder)

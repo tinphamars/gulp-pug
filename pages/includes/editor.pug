@@ -1,0 +1,21 @@
+.modal.fade#modal-editor(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+  .modal-dialog.modal-fullscreen
+    .modal-content
+      .modal-body.p-0
+        .detail-header.sticky-top.bg-white
+          .d-flex.align-items-center.w-with-padding
+            button.bg-white.border-0(data-bs-toggle="modal" data-bs-target="#modalPreview")
+              img(src="assets/img/back.png")
+            .flex-grow-1.text-center
+              span.fw-600.font-18.color-bl Nội dung bài viết
+      
+        .w-with-padding
+          .mt-3
+            textarea.form-control.textarea-editor(rows="3")
+    
+      .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+        .row
+          .col-6
+            button.btn.w-100.btn-outline-primary.btn-h-48(data-bs-toggle="modal" data-bs-target="#modalPreview") Hủy
+          .col-6
+            button.btn.w-100.btn-blue.btn-h-48 Lưu

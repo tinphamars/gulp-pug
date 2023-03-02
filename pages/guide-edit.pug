@@ -1,0 +1,57 @@
+include includes/header-detail.pug
+include form/form.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Guide edit")
+
+  body
+    section.main
+      +headerDetail('Thêm bài viết mới')
+      
+      .w-with-padding.mt-3.color-bl.mb-sub-button
+        form(action="") 
+          .mb-3
+            +select('Chủ đề', true)
+
+          .mb-3
+            +select('Thiết lập ngôn ngữ bài viết', true)
+
+          .mb-3
+            +select('Quốc gia', true)      
+
+          .mb-3
+            +select('Tỉnh/Thành Phố', true)     
+          
+          .mb-3
+            +img('Hình ảnh Banner', true, 'Dimension (1242 x 464) Max 500KB')   
+
+          .mb-3 
+            img(src="assets/img/promo-detail.png", alt="alt")
+
+          .mb-3
+            +img('Hình ảnh cover', true, 'Dimension (260 x 260) Max 500KB')   
+
+          .mb-3 
+            img(src="assets/img/promo-detail-logo.png", alt="alt")
+
+          .mb-3
+            +text('Tiêu đề bài viết', true, 'Nhập tiêu bài viết')
+          
+          .mb-3
+            +textarea('Nội dung bài viết', 6, true, false, '')
+    
+      .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+        .row
+          .col-6
+            button.btn.w-100.btn-outline-primary.btn-h-48 Huỷ
+          .col-6
+            button.btn.w-100.btn-blue.btn-h-48 Lưu
+            
+
+    include includes/modal-notify.pug
+    include includes/editor.pug
+    include includes/js.pug
+    

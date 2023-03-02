@@ -1,0 +1,18 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Popular inside | HYO")
+
+  body
+    section.main
+      +headers('Điểm đến hàng đầu tại QG', '(11 bài viết)')
+      include includes/guide/list.pug
+      include includes/add.pug
+
+    include includes/crypto/modal-confirm-active.pug
+    include includes/popular/search.pug
+    include includes/js.pug
+

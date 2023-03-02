@@ -46,3 +46,28 @@ if (cryptoActive.length > 0) {
   });
 }
 // end modal when change active field
+
+var focusShowModal = document.getElementsByClassName("focus-show-modal");
+var modalEditorElement = document.getElementById("modal-editor");
+
+if (modalEditorElement) {
+  var modalEditor = new bootstrap.Modal(modalEditorElement, {
+    keyboard: false,
+  });
+}
+
+if (focusShowModal.length > 0) {
+  Array.from(focusShowModal).forEach(function (element) {
+    element.addEventListener("focus", (e) => {
+      modalEditor && modalEditor.show();
+    });
+  });
+}
+
+// tinyEditor
+tinymce.init({
+  selector: ".textarea-editor",
+  plugins: [""],
+  width: "100%",
+  height: "80vh",
+});
