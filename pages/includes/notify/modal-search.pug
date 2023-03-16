@@ -1,0 +1,39 @@
+include ../../form/form.pug
+.modal.fade#modal-search(tabindex="-1", aria-labelledby="exampleModalLabel", aria-modal="true", role="dialog")
+  .modal-dialog.modal-fullscreen
+    .modal-content.modal-search
+      .modal-search-header.d-flex.justify-content-between.align-items-center
+        img(src="assets/img/back.png", data-bs-dismiss="modal", aria-label="Close")
+        .center Tìm kiếm
+        .right Xóa bộ lọc
+      .modal-body
+        form
+          .row.mb-4
+            .col-6
+               +select('Danh mục', false)
+            .col-6
+              +date('Ngày tạo', false)
+          .mb-4 
+            .d-flex.justify-content-between.align-items-center.collapsed(data-bs-toggle="collapse" data-bs-target="#search-with-type" aria-expanded="false" aria-controls="search-with-type")
+              span.fw-600.color-bl Tìm Kiếm Nâng Cao
+              img.round-auto(src="assets/img/caret-down.png", alt="option search")
+          .collapse#search-with-type
+            .mb-3
+              +text('Tiêu đề', false)
+            .mb-3
+              +date('Thời gian gửi từ', false)
+            .mb-3
+              +date('Thời gian gửi đến', false)
+            .mb-3
+              +select('Quốc gia', false)
+            .mb-3
+              +select('Thành phố', false)
+            .mb-3
+              +select('Đối tượng', false)
+            .mb-4
+              +select('Trạng thái', false)
+            
+          
+        .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+          button.btn.btn-in.w-100(type="submit")
+            span Tìm kiếm

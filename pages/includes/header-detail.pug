@@ -1,7 +1,10 @@
-mixin headerDetail(title)
+mixin headerDetail(title, number)
   .detail-header.sticky-top.bg-white
     .d-flex.align-items-center.w-with-padding
       a(href="#" data-bs-toggle="modal" data-bs-target="#modal-notify" aria-controls="modal-notify")
         img(src="assets/img/back.png")
       .flex-grow-1.text-center
         span.fw-600.font-18.color-bl=title
+          if(number === "hasOrderId") 
+            br  
+            | #17112022-HY-TVP-S6ETIP-234234

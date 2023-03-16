@@ -64,3 +64,9 @@ mixin textFocus(label, required, placeholder)
     if required
       span.text-danger  *
   input.form-control.form-control-root.focus-show-modal(type="text", placeholder=placeholder)
+
+mixin textareaEditor(label, required)
+  label.form-label=label
+  if required
+    span.text-danger  *
+  textarea.textarea-editor

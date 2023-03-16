@@ -1,0 +1,149 @@
+include includes/header-detail.pug
+include includes/style.pug
+include form/form.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Cancel a hotel")
+  
+  body
+    section.main
+      +headerDetail('Phụ phí đơn hàng')
+
+      .w-with-padding.mb-sub-button
+        .mt-3
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#surchargeStripe") Phụ phí đơn hàng
+        .mt-3
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#surchargeSuccess") Phụ phí thành công
+    
+    .modal.fade#surchargeStripe(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .w-with-padding.position-relative
+            button.border-0.bg-white.position-absolute.dismiss-button-custom.p-0(type="button", data-bs-dismiss="modal", aria-label="Close")
+              img(src="assets/img/cancel.png", alt="alt")
+            .text-center.my-20.d-flex.align-items-center.justify-content-center
+              img.padding-r-10(src="assets/img/surcharge.png", alt="alt")
+              span.fw-600.color-bl.font-18 Phụ phí đơn hàng
+                br
+                | # H-20210821102832
+
+            .mb-3 
+              +text('Nội dung thu phí', true)
+
+            .mb-3 
+              +text('Email khách hàng', true)
+            
+            .mb-3
+              label.form-label Số tiền
+                span.text-danger  *
+              .input-group
+                input.form-control.form-control-root(type="text", placeholder="Nhập số tiền...")
+                button.btn.btn-outline-secondary.dropdwon-input-custom.dropdown-toggle(type="button", data-bs-toggle="dropdown", aria-expanded="false") USD
+                ul.dropdown-menu.dropdown-menu-end.custom-pkt-dropdown.color-gray 
+                  li.d-flex.align-items-center.justify-content-between.p-2.choose-dropdown-ptk
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon VND
+                      span Vietnamese Dong
+                    img(src="assets/img/cancle-fligt-check.png", alt="cancel flight")
+                  
+                  li.d-flex.align-items-center.justify-content-between.p-2
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon USD 
+                      span US Dollar
+
+                  li.d-flex.align-items-center.justify-content-between.p-2
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon PHP
+                      span Philippine Peso
+
+                  li.d-flex.align-items-center.justify-content-between.p-2
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon EUR 
+                      span Euro
+                  
+                  li.d-flex.align-items-center.justify-content-between.p-2
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon JPY
+                      span Japanese Yen
+                  
+                  li.d-flex.align-items-center.justify-content-between.p-2
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon KRW
+                      span Korea Won
+
+                  li.d-flex.align-items-center.justify-content-between.p-2
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon IDR 
+                      span Indonesian Rupiad
+                  
+                  li.d-flex.align-items-center.justify-content-between.p-2
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon MYR 
+                      span Malaysian Ringgit
+                  
+                  li.d-flex.align-items-center.justify-content-between.p-2
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon CNY
+                      span Chinese Yuan
+                  
+                  li.d-flex.align-items-center.justify-content-between.p-2
+                    .d-flex.padding-r-15.align-items-center
+                      span.text-uppercase.padding-r-10.w-currency-dropdwon AUD 
+                      span Australian Dollar
+
+            .mb-3  
+              label.form-label Cổng thanh toán
+                span.text-danger  *
+              select.form-select.form-control-root#change-stripe-fmc(aria-label="Default select example")
+                option(selected, value='F-M-C') FMC
+                option(value="STRIPE") Stripe
+            
+            .mb-4#hidden-crypto.show
+              .mb-3
+                +select('Loại crypto', true)
+              .fw-600.color-bl
+                span Số tiền thanh toán: 
+                  span.text-success payn 21010.70063694
+            
+
+            .mb-4.text-center
+              button.btn.btn-primary Gửi link thanh toán
+    
+    .modal.fade#surchargeCrypto(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .w-with-padding.position-relative
+            button.border-0.bg-white.position-absolute.dismiss-button-custom.p-0(type="button", data-bs-dismiss="modal", aria-label="Close")
+              img(src="assets/img/cancel.png", alt="alt")
+            .text-center.my-20
+              span.fw-600.text-danger.font-18 Hủy đặt phòng nội bộ
+            .mb-3
+              span.fw-600.color-bl Bạn có chắc muốn huỷ đặt phòng này không?
+              .mt-1
+                p.color-bl 
+                  span.fw-600.color-bl *Lưu ý:  
+                  | Bạn cần thực hiện thao tác huỷ đặt phòng trực tiếp trên trang đối tác trước khi xác nhận huỷ đặt phòng tại đây.
+            hr.mb-3
+            .row.mb-3
+              .col-6
+                button.btn.btn-outline-secondary.w-100(type="button") Đóng
+              .col-6
+                button.btn.btn-danger.w-100(type="button") Hủy đặt phòng
+    
+    .modal.fade#surchargeSuccess(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .w-with-padding.position-relative
+            button.border-0.bg-white.position-absolute.dismiss-button-custom.p-0(type="button", data-bs-dismiss="modal", aria-label="Close")
+              img(src="assets/img/cancel.png", alt="alt")
+            .text-center.my-20
+              .mb-3
+                img(src="assets/img/cancel-success.png", alt="hotel cancel")
+              .fw-500
+                span.text-success Bạn đã gửi link thanh toán thành công cho email
+                br
+                span.color-bl johngomez@gmail.com
+
+    include includes/js.pug

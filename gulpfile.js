@@ -41,7 +41,7 @@ function assetsTask() {
 
 function serve() {
   browserSync.init({ server: { baseDir: "./dist", directory: true } });
-  watch(FilesPath.htmlFiles, htmlTask);
+  // watch(FilesPath.htmlFiles, htmlTask);
   watch(FilesPath.scssFiles, sassTask);
   watch(FilesPath.jsFiles, jsTask);
   watch(FilesPath.assets, assetsTask);
@@ -50,7 +50,7 @@ function serve() {
 
 exports.js = jsTask;
 exports.sass = sassTask;
-exports.html = htmlTask;
+// exports.html = htmlTask;
 exports.assets = assetsTask;
-exports.default = series(parallel(htmlTask, sassTask, assetsTask, jsTask));
+// exports.default = series(parallel(htmlTask, sassTask, assetsTask, jsTask));
 exports.watch = serve;

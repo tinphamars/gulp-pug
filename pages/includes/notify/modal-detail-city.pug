@@ -1,0 +1,19 @@
+mixin notifyModalViewCity(titleModalNotifyViewCity, idModal)
+  .modal.fade(id=idModal tabindex="-1", aria-labelledby="exampleModalLabel", aria-modal="true", role="dialog")
+    .modal-dialog.modal-fullscreen
+      .modal-content
+        .modal-body.color-bl
+          .w-with-padding
+            .mb-1
+              .d-flex.justify-content-between.align-items-center
+                span.fw-600=titleModalNotifyViewCity
+                .p-1(data-bs-dismiss="modal" aria-label="Close")
+                  img(src="assets/img/cancel.png", alt="")
+            ul.list-group.list-group-flush
+              li.list-group-item Hồ Chí Minh City
+              li.list-group-item Hà Nội
+              li.list-group-item Đà Lạt
+              li.list-group-item Hà Giang
+              li.list-group-item Quảng Ngãi City
+          
+        

@@ -1,0 +1,14 @@
+include includes/header-detail.pug
+include includes/style.pug
+include includes/notify/detail.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Thông tin chi tiết bài viết thông báo | HYO")
+
+  body
+    section.main
+      +headerDetail('Thông tin chi tiết bài viết thông báo', '')
+      +notifyDetail('cho-goi')
+    include includes/js.pug

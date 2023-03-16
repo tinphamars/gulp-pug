@@ -1,0 +1,39 @@
+mixin notifyItem(itemStatus)
+  .card-crypto.mb-3.bg-gray.border.p-3.bd-5px
+    .d-flex.justify-content-between.align-items-center.mb-4
+      span.text-main.fw-600 20052022 N-KGF1DF
+      if (itemStatus === 1)
+        span.btn-notify.notify-success Hoàn thành
+      if (itemStatus === 2)
+        span.btn-notify.notify-gray Nháp
+      if (itemStatus === 3)
+        span.btn-notify.notify-yellow Đã duyệt, Chờ gửi
+      if (itemStatus === 4)
+        span.btn-notify.notify-danger Từ chối duyệt
+      if (itemStatus === 5)
+        span.btn-notify.notify-orange Chờ phê duyệt
+
+    a.d-block.text-decoration-none(href="#")
+      .mb-3 
+        span.fw-600.color-bl Đã lâu bạn không đặt vé
+
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Loại thông báo:
+        span.text-black.fw-600 Hệ thống
+
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Danh mục:
+        span.text-black.fw-600 Hotel
+
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-3
+        span.fw-500 Ngày gửi:
+        span.text-black.fw-600 01/03/2022 - 01:08 AM
+
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-3
+        span.fw-500 Đối tượng:
+        span.text-black.fw-600 Cá nhân
+
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-3
+        span.fw-500 Người tạo:
+        span.text-black.fw-600 Bùi Kim Xuyến
+      

@@ -1,0 +1,107 @@
+include includes/header-detail.pug
+include includes/promo/modal-choose.pug
+include form/form.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Chỉnh sửa thông tin thông báo | HYO")
+
+  body
+    section.main
+      +headerDetail('Chỉnh sửa thông tin thông báo')
+      
+      .w-with-padding.mt-3.color-bl.mb-sub-button
+        .mb-3
+          span.fw-600 Thông tin khuyến mãi
+        form(action="") 
+          .mb-3
+            +text('Mã thông báo', true, '20052022-N-KGF1DF')
+
+          .mb-3
+            +select('Loại thông báo', true)
+          
+          .mb-3
+            +select('Danh mục', true)
+
+          .mb-3
+            +select('Quốc gia', true)
+
+          .mb-3
+            .d-flex.justify-content-between.align-align-items-center.mb-2
+              .left__
+                span Thành phố
+                  span.text-danger  * 
+                span (8 được chọn)
+              .right__
+                .text-main.fw-600 Xoá hết
+            .border.border-1.rounded-3.p-2(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListCity", aria-controls="offcanvasBottom")
+              .overflow-x-scroll
+                .btn.btn-city Hồ Chí Minh
+                .btn.btn-city Hà Nội
+                .btn.btn-city Đà Nẵng
+                .btn.btn-city Hồ Chí Minh
+                .btn.btn-city Hà Nội
+                .btn.btn-city Đà Nẵng  
+
+          .mb-3
+            +select('Quốc gia', true)
+          .mb-3
+            .d-flex.justify-content-between.align-align-items-center.mb-2
+              .left__
+                span Chọn đối tượng tương ứng
+                  span.text-danger  * 
+                span (8 được chọn)
+              .right__
+                .text-main.fw-600 Xoá hết
+            .border.border-1.rounded-3.p-2(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListUser", aria-controls="offcanvasBottom")
+              .overflow-x-scroll
+                .btn.btn-city Tín Phạm
+                .btn.btn-city Phạm Tín
+                .btn.btn-city Kiến Tín
+                .btn.btn-city Tín Kiến
+          
+          .mb-3
+           +select('Thiết lập ngôn ngữ Notify', true)
+
+          .mb-3
+            +date('Ngày gửi',true)
+          
+          .mb-3
+            +text('Link URL', true, 'https://admin.heyotrip.com/hotel/notify')
+          
+          .mb-3
+            +text('Tiêu đề', true, 'Khuyến mãi 30/4 - 1/5')
+          
+          .mb-3
+            +textarea("Nội dung", 6, true, false, 'Hưởng ứng dịp lễ 30/4 - 1/5 năm nay, Heyotrip tung nhiều ưu đãi hấp dẫn với các nội ưu đãi đa dạng phong phú,...')
+          
+          .mb-3
+            .d-flex.flex-column.align-items-start.mb-2
+              label.form-label.mb-0(for="cryptoInputEmail5") Hình ảnh
+              span.font-12.color-gray Dimension (1242x464) Max 500KB
+            .d-block
+              input#inputGroupFile02(type="file" hidden="true")
+              label.input-group-text.btn.btn-img-upload.fw-600(for="inputGroupFile02")
+                img.padding-r-10(src="assets/img/add-img.png", alt="") 
+                span Tải ảnh
+    
+      .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+        .row
+          .col-4
+            a(href="#")
+              button.btn.w-100.btn-blue.btn-h-48 Chỉnh sửa
+          .col-4
+            button.btn.w-100.btn-outline-success.btn-h-48 Gửi duyệt
+          .col-4
+            button.btn.w-100.btn-outline-primary.btn-h-48(data-bs-toggle="modal" data-bs-target="#notifyPreview") Xem trước
+
+    +promoCodeModal('Đối tượng','Chọn đối tượng tương ứng', 'offcanvasListUser')
+    +promoCodeModal('Thành phố','Nhập thành phố cần tìm', 'offcanvasListCity')
+
+    include includes/promo/preview.pug
+    include includes/promo/modal-partner-payment.pug
+    include includes/modal-notify.pug
+    include includes/js.pug
+    

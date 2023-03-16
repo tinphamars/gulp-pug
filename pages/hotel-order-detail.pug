@@ -1,0 +1,327 @@
+include includes/header-detail.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Hotel order detail")
+  
+  body
+    section.main
+      +headerDetail('Chi tiết đơn hàng', 'hasOrderId')
+      .w-with-padding.mb-sub-button-detail
+        .mt-3.mb-3
+          span.fw-600.color-bl.font-16 Thông tin khuyến mãi
+            
+        .order-if-body
+          .d-flex.justify-content-between.mb-3
+            span Mã đơn hàng:
+            span.fw-600.color-bl 17112022-HY-H-TVP-S6ETIP
+          .d-flex.justify-content-between.mb-3
+            span Ngày tạo:
+            span.fw-600.color-bl 2022-11-17 22:13:04
+          .d-flex.justify-content-between.mb-3
+            span Người tạo:
+            span.fw-600.color-bl 57923
+          .d-flex.justify-content-between.mb-3
+            span Ngày cập nhật:
+            span.fw-600.color-bl 2022-11-17 22:14:52
+          .d-flex.justify-content-between.mb-3
+            span Trạng thái thanh toán:
+            span.fw-600.text-payed Đã thanh toán
+          .d-flex.justify-content-between.mb-5
+            span Email xác nhận KH:
+            span.fw-600.text-payed -
+          .d-flex.justify-content-between.mb-3
+            span Trạng thái đơn hàng:
+            span.fw-600.text-waiting Chờ xử lý
+          .d-flex.justify-content-between.mb-3
+            span Lý do cần xử lý:
+            span.fw-600.color-bl -
+          .d-flex.justify-content-between.mb-3
+            span Người phụ trách:
+            span.fw-600.color-bl CS - Mai Hương
+          .d-flex.justify-content-between.mb-3
+            span Đối tác:
+            span.fw-600.color-bl -
+          .d-flex.justify-content-between.mb-3
+            span Mã đơn hàng đối tác:
+            span.fw-600.text-payed 35D0FY
+          .order-if-edit.position-relative
+            img(src="assets/img/edit-icon.png", alt="icon edit")
+            input.form-control.form-control-root(type="text", placeholder="Ghi chú", value="Ghi chú")
+
+        hr.w-100.my-16
+        .order-if
+          .order-if-title
+            span.fw-16.fw-600.color-bl Thông tin liên hệ
+          .order-if-body
+            .d-flex.justify-content-between.mb-3
+              span Tên & Họ:
+              span.fw-600.color-bl Ha Nguyen Van
+            .d-flex.justify-content-between.mb-3
+              span Danh xưng:
+              span.fw-600.color-bl Ông
+            .d-flex.justify-content-between.mb-3
+              span Quốc tịch:
+              span.fw-600.color-bl Vietnam
+            .d-flex.justify-content-between.mb-3
+              span Email:
+              span.fw-600.color-bl hanguyen@hahalolo.com
+            .d-flex.justify-content-between.mb-3
+              span Số điện thoại:
+              span.fw-600.color-bl +84946021236
+
+        hr.w-100.my-16
+        .order-if
+          .order-if-title
+            span.fw-16.fw-600.color-bl Thông tin liên hệ
+          .order-if-body
+            .d-flex.justify-content-between.mb-3
+              span Tên & Họ:
+              span.fw-600.color-bl Ha Nguyen Van
+            .d-flex.justify-content-between.mb-3
+              span Danh xưng:
+              span.fw-600.color-bl Ông
+            .d-flex.justify-content-between.mb-3
+              span Quốc tịch:
+              span.fw-600.color-bl Vietnam
+            .d-flex.justify-content-between.mb-3
+              span Email:
+              span.fw-600.color-bl hanguyen@hahalolo.com
+            .d-flex.justify-content-between.mb-3
+              span Số điện thoại:
+              span.fw-600.color-bl +84946021236
+
+        hr.w-100.my-16
+        .order-if
+          .order-if-title
+            .d-flex.justify-content-between.align-items-center.h-auto
+              span.font-16.fw-600.color-bl Thông tin khách sạn
+              div
+                button.btn.btn-outline-dark.dropdown-toggle(type="button", data-bs-toggle="offcanvas", data-bs-target="#offcanvasBottomFlightChoose", aria-controls="offcanvasBottomFlightChoose") Tuỳ chọn
+                
+        .order-if-body
+          h2.font-16.fw-bold.color-bl SOMERSET HOA BINH HANOI
+          .hotel-rating.mt-0
+            img(src="assets/img/rating.png", alt="start")
+            img(src="assets/img/rating.png", alt="start")
+            img(src="assets/img/rating.png", alt="start")
+            img(src="assets/img/rating.png", alt="start")
+            img(src="assets/img/rating.png", alt="start")
+          .hotel-address.color-bl No. 54, Lieu Giai St. Cong Vi Ward, Hanoi
+            
+          .hotel-phone.color-bl Số điện thoại: 
+            span.fw-600 84-437-555888
+          .hotel-cancel.pt-2.pb-2.bd-gray.w-with-padding.mt-3.bg-gray.color-bl
+            .hotel-cancel-title Mã đặt phòng: 
+              span.fw-600.text-main 50920SE003344
+            hr
+            .hotel-check-in-out.d-flex.justify-content-between.mb-2
+              .d-flex.flex-column.align-items-center
+                span.mb-2.font-12.color-gray Check in
+                span.fw-600 02 Thg 9 2021
+                  
+              .d-flex.flex-column.align-items-center
+                img(src="assets/img/arrow-to-right.png", alt="arrow to right")
+                span.font-12.color-gray 2 đêm
+              .d-flex.flex-column.align-items-center
+                span.mb-2.font-12.color-gray Check in
+                span.fw-600 02 Thg 9 2021
+                  
+            .badge-danger.font-12.m-1 Lỗi!! Xử lý đặt phòng lại trước 18:25:00 25/08/2021
+              
+            .mt-3.collapsed(data-bs-toggle="collapse", data-bs-target="#CollapseCancelHotel", aria-expanded="false", aria-controls="CollapseCancelHotel")
+              p.font-12.text-main.text-end
+                span.p-2 Hiện chi tiết
+                img.ml-3.round-auto(src="assets/img/up-blue.png", alt="arrow to up")
+            hr
+            .collapse#CollapseCancelHotel
+              .hotel-customer
+                p.fw-600.text-main.mb-1 1 phòng - 1 người lớn, 0 trẻ em, 0 trẻ sơ sinh
+                p.mb-1 Khách nhận phòng: 
+                  span.fw-600 MasterJi Pham
+                p Danh xưng: 
+                  span.fw-600 Ông
+              hr
+              .hotel-policy-cancle
+                p.fw-600 Chính sách hủy phòng
+                p Free cancellation until 
+                  span.fw-600 29 May 2021 18:00 (GMT +07:00)
+                  br 
+                  | Cancellations made after 
+                  span.fw-600 29 May 2021 18:00 (GMT +07:00) will result in a
+
+                  span.fw-600 100% penalty
+                  | of the stay charges and fees.
+                  br
+                  | If you fail to check-in for this reservation or cancel or change this reservation after check-in, you may incur penalty charges at the discretion of the property of up to 100% of the booking value.
+
+          hr
+          section
+            .d-flex.justify-content-between.align-items-center.collapsed(data-bs-toggle="collapse", data-bs-target="#CollapseHotelInformation", aria-expanded="false", aria-controls="CollapseHotelInformation")
+              .title-detail.font-16.fw-600.color-bl Thông tin giá phòng
+              .icon-up-down
+                img.round-auto(src="assets/img/up.png", alt="up icon")
+            .collapse#CollapseHotelInformation
+              .p-3.bd-gray.mt-3
+                .d-flex.justify-content-between
+                  .w-60
+                    h4.fw-600.text-16.color-bl 1 King Bed, 50 Sqm, 24hr Room Service
+                    p.font-12.mb-0 Sức chứa: 4 người
+                    p.text-danger.font-12.mt-0.fw-600 Non - Refundable
+                  .text-end.w-40
+                    div
+                      img(src="assets/img/hotel-img-example.png", alt="hotel img")
+                    span.font-12.text-main Xem tiện nghi phòng
+                .d-flex.justify-content-between.mt-3.mb-0
+                  span Giá phòng:
+                  span.fw-600.color-bl 1,500,000 VND
+                hr
+                .d-flex.justify-content-between.mt-3
+                  div
+                    span.fw-600.font-16.color-bl Giá 1 phòng x 2 đêm:
+                    span.d-block.font-12 (Bao gồm thuế phí)
+                  span.fw-600.font-16.color-bl 3,700,000 VND
+          hr
+          section
+            .d-flex.justify-content-between.align-items-center.collapsed
+              .title-detail.font-16.fw-600.color-bl Lịch sử thay đổi (0)
+              .icon-up-down
+                img(src="assets/img/up.png", alt="up icon")
+          hr
+          section
+            .d-flex.justify-content-between.align-items-center.collapsed(data-bs-toggle="collapse", data-bs-target="#CollapsePayHistoryHotel2", aria-expanded="false", aria-controls="CollapsePayHistoryHotel2")
+              .title-detail.font-16.fw-600.color-bl Lịch sử giao dịch (2)
+              .icon-up-down
+                img.round-auto(src="assets/img/up.png", alt="up icon")
+            .collapse#CollapsePayHistoryHotel2
+              .p-3.bd-gray.mt-3
+                .color-bl
+                  span.fw-600.d-block TS98654321
+                  span.font-12.mt-0 10:28:32 21/08/2021
+                .mt-3.d-flex.justify-content-between
+                  span Mô tả:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl Thanh toán đơn hàng
+                    span.text-main #F-3-20210821102832-AB33900
+                .mt-3.d-flex.justify-content-between
+                  span Số tiền:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl 4,000,000 VND
+                .mt-3.d-flex.justify-content-between
+                  span Phí giao dịch:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl 200,000 VND
+                .mt-3.d-flex.justify-content-between
+                  span Tổng tiền:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl BTC 0,0011
+                    span.text-payed Đã thanh toán
+                .mt-3.d-flex.justify-content-between
+                  span Phương thức:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl Crypto
+                .mt-3.d-flex.justify-content-between
+                  span Chứng từ: 
+                  .w-60.fw-600.text-end
+                    span.text-main.text-break C00004C45377992018D1A8474028BA7F83336105...
+              .p-3.bd-gray.mt-3
+                div
+                  span.fw-600.d-block TS98654321
+                  span.font-12.mt-0 10:28:32 21/08/2021
+                .mt-3.d-flex.justify-content-between
+                  span Mô tả:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl Thanh toán đơn hàng
+                    span.text-main #F-3-20210821102832-AB33900
+                .mt-3.d-flex.justify-content-between
+                  span Số tiền:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl 4,000,000 VND
+                .mt-3.d-flex.justify-content-between
+                  span Phí giao dịch:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl 200,000 VND
+                .mt-3.d-flex.justify-content-between
+                  span Tổng tiền:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl BTC 0,0011
+                    span.text-payed Đã thanh toán
+                .mt-3.d-flex.justify-content-between
+                  span Phương thức:
+                  .w-60.fw-600.text-end
+                    span.d-block.color-bl Crypto
+                .mt-3.d-flex.justify-content-between
+                  span Chứng từ: 
+                  .w-60.fw-600.text-end
+                    span.text-main.text-break C00004C45377992018D1A8474028BA7F83336105...
+
+      .fixed-bottom.bg-white.pb-2.w-with-padding
+        hr.hr-full
+        .d-flex.justify-content-between.align-items-center
+          span Tổng giá trị đơn hàng: 
+            span.fw-bold.font-18.color-bl 3,100,000 VND
+          span.text-main.fw-600.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasBottomPrice", aria-controls="offcanvasBottomPrice") Chi tiết
+        hr.hr-full
+        .text-end.mb-2
+          button.btn.btn-green XN Thanh toán
+          button.btn.btn-danger Hủy đơn
+
+
+    .offcanvas.offcanvas-bottom.offcanvas-with-radius#offcanvasBottomFlightChoose(style="z-index: 1111; height: auto;", tabindex="-1", aria-labelledby="offcanvasBottomLabel")
+      .offcanvas-body.small
+        .text-center
+          img(src="assets/img/line-width-50.png", alt)
+        ul.list-group.list-group-flush.color-bl.fw-600.mt-2
+          li.list-group-item.text-center.p-3 Đặt phòng lại
+          li.list-group-item.text-center.p-3 Huỷ đặt phòng
+
+    .offcanvas.offcanvas-bottom.offcanvas-custom#offcanvasBottomPrice(style="z-index: 1111; height: auto;", tabindex="-1", aria-labelledby="offcanvasBottomLabel")
+      .offcanvas-header.text-center
+        hr.with-50
+      .offcanvas-body.color-bl
+        h3.text-center.font-16.fw-bold Chi tiết đơn hàng
+        .bg-gray.p-3
+          .text-center
+            span.fw-600 02 Thg 9 2021 - 04 Thg 9 Jun 2021
+            span.font-12  (2 nights)
+          hr
+          .d-flex.justify-content-between.fw-600.align-items-center
+            span 1 room(s) x 2 night(s)
+            span.font-12.mt-3 3,000,000 VND
+          .d-flex.justify-content-between.align-items-center.font-12
+            span.color-gray Giá phòng
+            span 1,500,000 VND
+          hr
+          .d-flex.justify-content-between.align-items-baseline
+            div
+              span.d-block.fw-600 Giá dự kiến
+              span.font-12.color-gray Bao gồm thuế & phí
+            span.fw-600 3,700,000 VND
+        .d-flex.justify-content-between.align-items-center.mt-2
+          span.fw-500 KS khuyến mãi:
+          span.fw-600 - 200,000 VND
+        .d-flex.justify-content-between.align-items-center.mt-1
+          div
+            span.d-block.fw-500 Mã giảm giá:
+            span.text-main.fw-500 (HOTSALE06)
+          span.fw-600 - 400,000 VND
+        .hotel-price-total.fw-bold.font-16.text-center.mt-3
+          span.d-block TỔNG GIÁ TRỊ ĐƠN HÀNG
+          span 3,100,000 VND
+    include includes/js.pug
+
+
+
+
+
+
+
+
+
+
+
+
+
+

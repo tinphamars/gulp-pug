@@ -1,0 +1,18 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Danh sách bài viết thông báo | HYO")
+
+  body
+    section.main
+      +headers('Danh sách bài viết thông báo', '')
+      include includes/notify/list.pug
+      include includes/add.pug
+
+    include includes/crypto/modal-confirm-active.pug
+    include includes/notify/modal-search.pug
+    include includes/js.pug
+

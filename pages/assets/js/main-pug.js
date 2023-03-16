@@ -64,10 +64,22 @@ if (focusShowModal.length > 0) {
   });
 }
 
+var showCryptoInSurchargeFeature = document.getElementById("change-stripe-fmc");
+var showCryptoInSurchargeForm = document.getElementById("hidden-crypto");
+if (showCryptoInSurchargeFeature && showCryptoInSurchargeForm) {
+  showCryptoInSurchargeFeature.addEventListener("change", () => {
+    if (showCryptoInSurchargeFeature.value === "STRIPE") {
+      showCryptoInSurchargeForm.classList.remove("show");
+    } else {
+      showCryptoInSurchargeForm.classList.add("show");
+    }
+  });
+}
+
 // tinyEditor
 tinymce.init({
   selector: ".textarea-editor",
   plugins: [""],
   width: "100%",
-  height: "80vh",
+  height: "50vh",
 });

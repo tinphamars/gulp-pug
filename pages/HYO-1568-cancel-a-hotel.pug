@@ -1,0 +1,134 @@
+include includes/header-detail.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Cancel a hotel")
+  
+  body
+    section.main
+      +headerDetail('Huỷ đặt phòng')
+
+      .w-with-padding.mb-sub-button
+        .mt-3
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#cancelAHotel") Huỷ đặt phòng
+        .mt-3
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#cancelAHotelIntestine") Huỷ đặt phòng nội bộ
+        .mt-3
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#cancelAHotelNow") Huỷ đặt phòng trực tiếp
+        .mt-3
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#cancelAHotelSuccess") Huỷ đặt phòng thành công
+        .mt-3
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#cancelAHotelError") Huỷ đặt phòng thất bại
+    
+    .modal.fade#cancelAHotel(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .w-with-padding.position-relative
+            button.border-0.bg-white.position-absolute.dismiss-button-custom.p-0(type="button", data-bs-dismiss="modal", aria-label="Close")
+              img(src="assets/img/cancel.png", alt="alt")
+            .text-center.my-20
+              span.fw-600.text-danger.font-18 Hủy đặt phòng
+            .mb-3
+              .mt-1
+                p.color-bl 
+                  span.fw-600.color-bl Hủy trực tiếp:  
+                  | Hệ thống tiến hành gọi API qua đối tác để hủy đặt phòng.
+              .mt-1
+                p.color-bl 
+                  span.fw-600.color-bl Hủy nội bộ: 
+                  | Áp dụng trong trường hợp đã hủy đặt phòng trực tiếp trên trang đối tác. Tính năng góp phần đồng bộ dữ liệu trạng thái trên hệ thống.
+            hr.mb-3
+            .row.mb-3
+              .col-6
+                button.btn.btn-danger.w-100(type="button") Hủy trực tiếp
+              .col-6
+                button.btn.btn-danger.w-100(type="button") Hủy nội bộ 
+    
+    .modal.fade#cancelAHotelIntestine(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .w-with-padding.position-relative
+            button.border-0.bg-white.position-absolute.dismiss-button-custom.p-0(type="button", data-bs-dismiss="modal", aria-label="Close")
+              img(src="assets/img/cancel.png", alt="alt")
+            .text-center.my-20
+              span.fw-600.text-danger.font-18 Hủy đặt phòng nội bộ
+            .mb-3
+              span.fw-600.color-bl Bạn có chắc muốn huỷ đặt phòng này không?
+              .mt-1
+                p.color-bl 
+                  span.fw-600.color-bl *Lưu ý:  
+                  | Bạn cần thực hiện thao tác huỷ đặt phòng trực tiếp trên trang đối tác trước khi xác nhận huỷ đặt phòng tại đây.
+            hr.mb-3
+            .row.mb-3
+              .col-6
+                button.btn.btn-outline-secondary.w-100(type="button") Đóng
+              .col-6
+                button.btn.btn-danger.w-100(type="button") Hủy đặt phòng
+    
+    .modal.fade#cancelAHotelNow(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .w-with-padding.position-relative
+            button.border-0.bg-white.position-absolute.dismiss-button-custom.p-0(type="button", data-bs-dismiss="modal", aria-label="Close")
+              img(src="assets/img/cancel.png", alt="alt")
+            .text-center.my-20
+              span.fw-600.text-danger.font-18 Hủy đặt phòng trực tiếp
+            .mb-3
+              .text-center.mb-20
+                div.color-bl Bạn đang thực hiện hủy đặt phòng tại
+                span.color-bl.fw-600 Khách sạn Marriot Hotel
+                  br
+                  | Từ ngày 20/04/2022 đến ngày 22/04/2022.
+              .mt-1
+                p.color-bl 
+                  span.fw-600.color-bl *Lưu ý:  
+                  | Hệ thống sẽ tiến hành gọi API qua đối tấc để hủy đặt phòng cho khách hàng.
+            hr.mb-3
+            .row.mb-3
+              .col-6
+                button.btn.btn-outline-secondary.w-100(type="button") Đóng
+              .col-6
+                button.btn.btn-danger.w-100(type="button") Hủy đặt phòng
+    
+    .modal.fade#cancelAHotelSuccess(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .w-with-padding.position-relative
+            button.border-0.bg-white.position-absolute.dismiss-button-custom.p-0(type="button", data-bs-dismiss="modal", aria-label="Close")
+              img(src="assets/img/cancel.png", alt="alt")
+            .text-center.my-20
+              .mb-3
+                img(src="assets/img/cancel-success.png", alt="hotel cancel")
+              span.fw-600.text-success.font-18 Hủy đặt phòng thành công!
+            .mb-3
+              .text-center
+                span.color-bl Bạn vừa thực hiện hủy đặt phòng thành công
+                  br
+                  | tại&nbsp;
+                  span.color-bl.fw-600 Khách sạn Marriot Hotel 
+                    br
+                    | Từ ngày 20/04/2022 đến ngày 22/04/2022.
+  
+    .modal.fade#cancelAHotelError(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .w-with-padding.position-relative.color-bl
+            button.border-0.bg-white.position-absolute.dismiss-button-custom.p-0(type="button", data-bs-dismiss="modal", aria-label="Close")
+              img(src="assets/img/cancel.png", alt="alt")
+            .text-center.my-20
+              .mb-3
+                img(src="assets/img/cancel-fail.png", alt="hotel cancel")
+              span.fw-600.text-danger.font-18 Hủy đặt phòng thất bại!
+            .mb-3.text-center
+              span.color-bl Bạn vừa thực hiện huỷ đặt phòng thất bại 
+                br
+                | tại&nbsp;
+                span.color-bl.fw-600 Khách sạn Marriot Hotel 
+                br
+                span.color-bl.fw-600 Từ ngày 20/04/2022 đến ngày 22/04/2022.
+            .mb-3.text-center
+              span Vui lòng kiểm tra lại điều kiện hủy & thử lại sau ít phút.
+              
+    include includes/js.pug

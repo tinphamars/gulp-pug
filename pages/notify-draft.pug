@@ -1,0 +1,21 @@
+include includes/header-detail.pug
+include includes/style.pug
+include includes/notify/detail.pug
+include includes/notify/modal-detail-city.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Thông tin chi tiết bài viết thông báo | HYO")
+
+  body
+    section.main
+
+      +headerDetail('Thông tin chi tiết bài viết thông báo', '')
+      +notifyDetail('notify-draft')
+    
+    +notifyModalViewCity('Thành phố', 'notifyShowAllCity')
+    +notifyModalViewCity('Chọn đối tượng tương ứng', 'notifyShowAllUser')
+    include includes/notify/modal-preview.pug
+    include includes/js.pug
+
