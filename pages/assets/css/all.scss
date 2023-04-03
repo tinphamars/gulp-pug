@@ -506,7 +506,7 @@ body {
 
 .form-select {
   background-color: #fff;
-  background-image: url("/assets/img/dropdown-icon.png");
+  background-image: url('../img/dropdown-icon.png');
   background-repeat: no-repeat;
   background-position: right 0.35rem center;
   background-size: 30px 22px;
@@ -919,9 +919,10 @@ body {
 }
 
 .btn-notify {
-  padding: 4px 10px;
+  padding: 4px 7px;
   font-weight: 600;
   border-radius: 5px;
+  font-size: 13px;
 }
 
 .notify-orange {
@@ -932,26 +933,26 @@ body {
 
 .notify-gray {
   color: #888888;
-  background: #ECECEC;
+  background: #ececec;
   border: 1px solid #888888;
 }
 
 .notify-danger {
-  color: #DC3545;
-  background: #F7E9ED;
-  border: 1px solid #DC3545;
+  color: #dc3545;
+  background: #f7e9ed;
+  border: 1px solid #dc3545;
 }
 
 .notify-success {
   color: #329223;
-  background: #F1FDEF;
-  border: 1px solid #329223
+  background: #f1fdef;
+  border: 1px solid #329223;
 }
 
 .notify-yellow {
-  color: #F3BA2F;
-  background: #FCF8E3;
-  border: 1px solid #F3BA2F;
+  color: #f3ba2f;
+  background: #fcf8e3;
+  border: 1px solid #f3ba2f;
 }
 
 .notify-color-orange {
@@ -963,7 +964,7 @@ body {
 }
 
 .notify-color-danger {
-  color: #DC3545;
+  color: #dc3545;
 }
 
 .notify-color-success {
@@ -971,11 +972,11 @@ body {
 }
 
 .notify-color-yellow {
-  color: #F3BA2F;
+  color: #f3ba2f;
 }
 
 .item-city {
-  border: 1px solid #ECECEC;
+  border: 1px solid #ececec;
   border-radius: 5px;
   padding: 9px 5px;
 }
@@ -984,6 +985,12 @@ body {
   margin-right: 5px;
 }
 
+.margin-left-15 {
+  margin-left: 15px;
+}
 
-
-
+.close-modal-v2 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}

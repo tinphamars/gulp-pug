@@ -79,7 +79,20 @@ if (showCryptoInSurchargeFeature && showCryptoInSurchargeForm) {
 // tinyEditor
 tinymce.init({
   selector: ".textarea-editor",
-  plugins: [""],
+  plugins: ["autoresize"],
   width: "100%",
   height: "50vh",
+});
+
+var offcanvasExample = document.getElementById("offcanvasAllowNotify");
+var modalConform = document.getElementById("modalConform");
+var modalReject = document.getElementById("modalReject");
+var offcanvas = new bootstrap.Offcanvas(offcanvasExample);
+
+modalConform.addEventListener("show.bs.modal", function () {
+  offcanvas.hide();
+});
+
+modalReject.addEventListener("show.bs.modal", function () {
+  offcanvas.hide();
 });

@@ -1,0 +1,19 @@
+include ../../form/form.pug
+.modal.fade#modalReject(tabindex="-1", aria-labelledby="exampleModalLabel", aria-modal="true", role="dialog")
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      .modal-body
+        img.close-modal-v2(src="assets/img/cancle.png", type="button", data-bs-dismiss="modal", aria-label="Close")
+        .text-center
+          span.color-bl.font-16.fw-600 Lý do từ chối duyệt
+        .w-with-padding.mt-3
+          .mb-3
+            +text('Mã thông báo', false, '20052022-N-KGF1DF')
+          .mb-3
+            +text('Tiêu đề', false, 'Khuyến mãi 30/4 - 1/5')
+          .mb-3
+            +text('Người tạo', false, 'Nguyễn Vân Anh')
+          .mb-3 
+            +textarea('Nội dung phản hồi',5, true, false, "Nhập nội dung") 
+          .mb-3 
+          button.btn.btn-blue.w-100 Gửi

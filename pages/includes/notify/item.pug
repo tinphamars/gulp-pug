@@ -1,17 +1,21 @@
-mixin notifyItem(itemStatus)
+mixin notifyItem(itemStatus, admin)
   .card-crypto.mb-3.bg-gray.border.p-3.bd-5px
     .d-flex.justify-content-between.align-items-center.mb-4
       span.text-main.fw-600 20052022 N-KGF1DF
-      if (itemStatus === 1)
-        span.btn-notify.notify-success Hoàn thành
-      if (itemStatus === 2)
-        span.btn-notify.notify-gray Nháp
-      if (itemStatus === 3)
-        span.btn-notify.notify-yellow Đã duyệt, Chờ gửi
-      if (itemStatus === 4)
-        span.btn-notify.notify-danger Từ chối duyệt
-      if (itemStatus === 5)
-        span.btn-notify.notify-orange Chờ phê duyệt
+      .d-flex.align-items-center
+        if (itemStatus === 1)
+          span.btn-notify.notify-success Hoàn thành
+        if (itemStatus === 2)
+          span.btn-notify.notify-gray Nháp
+        if (itemStatus === 3)
+          span.btn-notify.notify-yellow Đã duyệt, Chờ gửi
+        if (itemStatus === 4)
+          span.btn-notify.notify-danger Từ chối duyệt
+        if (itemStatus === 5)
+          span.btn-notify.notify-orange Chờ phê duyệt
+        if(admin)
+          span.margin-left-15.p-1(data-bs-toggle="offcanvas" data-bs-target="#offcanvasAllowNotify")
+            img(src="assets/img/3-dot.png", alt="")
 
     a.d-block.text-decoration-none(href="#")
       .mb-3 
