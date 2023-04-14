@@ -5,25 +5,25 @@ include form/form.pug
 doctype html
 html(lang="en")
 
-  +docType("District Add Page")
+  +docType("Thêm mới quận huyện | HYO")
 
   body
     section.main
-      +headerDetail('Thông tin Quận huyện')
+      +headerDetail('Thông tin quận/ huyện')
 
       .w-with-padding.mt-3.color-bl
         form(action="") 
           .mb-3
-            +text('Tên quận huyện (VI)', true, '')
+            +text('Tên quận/ huyện (VI)', true, '')
 
           .mb-3
-            +text('Tên quận huyện (EN)', true, '')
+            +text('Tên quận/ huyện (EN)', true, '')
           
           .mb-3
-           +text('Mã quận huyện', true, '')
+           +text('Mã quận/ huyện', true, '')
           
           .mb-3
-            +select('Thành phố', true)
+            +select('Tỉnh/ Thành phố', true)
 
           .mb-3
             +select('Quốc gia', true)

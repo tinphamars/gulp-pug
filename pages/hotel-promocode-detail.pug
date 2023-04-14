@@ -4,7 +4,7 @@ include includes/style.pug
 doctype html
 html(lang="en")
   
-  +docType("Hotel promo code detail page")
+  +docType("Chi tiết khuyến mãi | HYO")
   
   body
     section.main
@@ -22,28 +22,40 @@ html(lang="en")
           span Phân hệ:
           span.color-bl.fw-600 Hotel
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Loại khuyến mãi:
+          span.w-60 Loại khuyến mãi:
           span.color-bl.fw-600 Promo code
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span.w-60 Mã khuyến mãi:
+          span.color-bl.fw-600 SUMVAY
         .d-flex.justify-content-between.align-items-center.mb-3
           span Mã chương trình:
           span.color-bl.fw-600 08032022-H-VNSUMVAY
         .d-flex.justify-content-between.align-items-center.mb-3
           span Trạng thái:
-          span.fw-600.color-refurn Inactive
+          span.fw-600.notify-color-orange Inactive
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span.w-50 Tên chương trình khuyến mãi:
+          span.fw-600.text-end.color-bl Đẹp là không chờ đợi
         span.d-block.mb-2 Nội dung khuyến mãi: 
         .border.border-1.rounded.p-3.mb-3
           span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
       
         span.d-block.mb-2.color-bl Hình ảnh cover
         div.mb-3
-          img.rounded-1(src="/assets/img/promo-detail.png", width="240" alt="promo detail")   
+          img.rounded-1(src="assets/img/promo-detail.png", width="240" alt="promo detail")   
         span.d-block.mb-2.color-bl Hình ảnh logo
         div
-          img(src="/assets/img/promo-detail-logo.png", width="108" alt="promo detail")   
+          img(src="assets/img/promo-detail-logo.png", width="108" alt="promo detail")   
 
         hr.my-4
       
         h2.font-16.fw-600.mb-3.color-bl Thiết lập mã khuyến mãi
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Tự động apply
+          span.color-bl.fw-600 Có
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Kiểu hiển thị:
+          span.color-bl.fw-600 Hiển thị trong danh sách
         .d-flex.justify-content-between.align-items-center.mb-3
           span Đường dẫn hiển thị:
           span.color-bl.fw-600 https://admin.com
@@ -57,24 +69,28 @@ html(lang="en")
           span Số lượng phát hành:
           span.color-bl.fw-600 500.000.000
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Giới hạn sử dụng trong ngày
+          span Giới hạn sử dụng trong ngày:
           span.color-bl.fw-600 2.000
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Mức giảm giá theo %
+          span Mức giảm giá theo %:
           span.color-bl.fw-600 0
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Mức giảm tối đa
+          span Mức giảm tối đa:
           span.color-bl.fw-600 0 VND
-        span.d-block.mb-2 Nội dung khuyến mãi: 
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Nhà cung cấp dịch vụ:
+          span.color-bl.fw-600.text-end Tất cả nhà cung cấp trên hệ thống Heyotrip
+        span.d-block.mb-2 Nội dung tóm tắt khuyến mãi: 
         .border.border-1.rounded.p-3.mb-3
           span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
-        
+
         .d-flex.justify-content-between.align-items-center.mb-3
           span Đối tác thanh toán:
           div 
             .btn.btn-city.font-12 VCB
             .btn.btn-city.font-12 ACB
-            .btn.btn-city.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListPartnerPayment", aria-controls="offcanvasBottom") +10
+            .btn.btn-city-outline.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListPartnerPayment", aria-controls="offcanvasBottom") +10 
+              img.p-1(src="assets/img/more.png", alt="")
 
         hr.my-4
 
@@ -87,25 +103,28 @@ html(lang="en")
           div 
             .btn.btn-city.font-12 Hồ Chí Minh
             .btn.btn-city.font-12 Hà Nội
-            .btn.btn-city.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListCity", aria-controls="offcanvasBottom") +10
+            .btn.btn-city-outline.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListCity", aria-controls="offcanvasBottom") +10
+              img.p-1(src="assets/img/more.png", alt="")
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Ngày bắt đầu:
+          span Ngày nhận phòng từ:
           span.color-bl.fw-600 20/05/2022 - 02:00 AM
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Ngày kết thúc:
+          span Ngày nhận phòng đến:
           span.color-bl.fw-600 20/05/2022 - 02:00 PM
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Số lượng phát hành:
-          span.color-bl.fw-600 500.000.000
-        .d-flex.justify-content-between.align-items-center.mb-3
-          span Giới hạn sử dụng trong ngày
+          span Giá trị đơn hàng tối thiểu:
           span.color-bl.fw-600 2.000
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Mức giảm giá theo %
+          span Số lượng khách hàng tối thiểu:
           span.color-bl.fw-600 0
-        .d-flex.justify-content-between.align-items-center.mb-3
-          span Mức giảm tối đa
-          span.color-bl.fw-600 0 VND
+        .mb-3 
+          span Khách sạn áp dụng (đã chọn 12):
+        .mb-3
+          .btn.btn-city.font-12 Sheraton Nha Trang
+          .btn.btn-city.font-12 Puman Ha Noi
+          .btn.btn-city-outline.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListHotel", aria-controls="offcanvasBottom") +10 
+            img.p-1(src="assets/img/more.png", alt="")
+
         span.d-block.mb-2 Nội dung khuyến mãi: 
         .border.border-1.rounded.p-3.mb-3
           span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
@@ -132,6 +151,20 @@ html(lang="en")
           .btn.btn-city.font-12.mb-2 Đà Lạt
           .btn.btn-city.font-12.mb-2 Cần Thơ
           .btn.btn-city.font-12.mb-2 Vũng Tàu
+
+    .offcanvas.offcanvas-bottom.offcanvas-with-radius#offcanvasListHotel(style="z-index: 1111;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
+      .offcanvas-body.small
+        .text-center
+          img(src="assets/img/line-width-50.png", alt="line x")
+          div.mt-3
+            h3.fw-600.font-16.color-bl Khách sạn
+        .mt-3
+          .btn.btn-city.font-12.mb-2 Sheraton Nha Trang
+          .btn.btn-city.font-12.mb-2 Puman Ha Noi
+          .btn.btn-city.font-12.mb-2 Sheraton Nha Trang 3
+          .btn.btn-city.font-12.mb-2 Sheraton Nha Trang 5
+          .btn.btn-city.font-12.mb-2 Puman Ha Noi 1
+          .btn.btn-city.font-12.mb-2 Vũng Tàu Puman Ha Noi
     
     .offcanvas.offcanvas-bottom.offcanvas-with-radius#offcanvasListPartnerPayment(style="z-index: 1111; height:auto; max-height:80vh;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
       .offcanvas-body.color-bl
@@ -141,19 +174,19 @@ html(lang="en")
             h3.fw-600.font-16 Đối tác thanh toán
         .mb-3
           .d-flex.align-items-center
-            img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
+            img.padding-r-10(src="assets/img/icon-vcb.png", alt="")
             div.text-start
               span.fw-600.d-block VietComBank
               span.font-12 Ngân hàng TMCP Ngoại thương Việt Nam
         .mb-3
           .d-flex.align-items-center
-            img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
+            img.padding-r-10(src="assets/img/icon-vcb.png", alt="")
             div.text-start
               span.fw-600.d-block VietComBank
               span.font-12 Ngân hàng TMCP Ngoại thương Việt Nam
         .mb-3
           .d-flex.align-items-center
-            img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
+            img.padding-r-10(src="assets/img/icon-vcb.png", alt="")
             div.text-start
               span.fw-600.d-block VietComBank
               span.font-12 Ngân hàng TMCP Ngoại thương Việt Nam

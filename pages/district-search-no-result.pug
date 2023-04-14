@@ -1,16 +1,18 @@
 include includes/header.pug
 include includes/style.pug
+include includes/country/modal-search.pug
 
 doctype html
 html(lang="en")
  
-  +docType("District search list")
+  +docType("Kết quả tìm kiếm | HYO")
  
   body
     section.main
-      +headers("Quận/Huyện", "")
+      +headers("Quận/ Huyện", "713 Quận/ Huyện")
       include includes/search-no-result.pug
+      include includes/add.pug
 
-    include includes/promo/modal-search.pug
+    +modalSearchLocal('Tra cứu quận/huyện', 3)
     include includes/js.pug
 

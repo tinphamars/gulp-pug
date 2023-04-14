@@ -5,7 +5,7 @@ include includes/style.pug
 doctype html
 html(lang="en")
   
-  +docType("Popular edit")
+  +docType("Thêm bài viết mới | HYO")
 
   body
     section.main
@@ -25,24 +25,24 @@ html(lang="en")
           .mb-3
             +img('Hình ảnh Banner', true, 'Dimension (1242 x 464) Max 500KB')   
 
-          .mb-3
-            .position-relative.d-inline-block
-              img(src="assets/img/promo-detail.png", alt="alt")
-              button.bg-transparent.border-0.p-0.remove-img-icon 
-                img(src="assets/img/cancle-cycle.png", alt="alt")
+          //- .mb-3
+          //-   .position-relative.d-inline-block
+          //-     img(src="assets/img/promo-detail.png", alt="alt")
+          //-     button.bg-transparent.border-0.p-0.remove-img-icon 
+          //-       img(src="assets/img/cancle-cycle.png", alt="alt")
 
 
           .mb-3
             +img('Hình ảnh cover', true, 'Dimension (260 x 260) Max 500KB')   
 
-          .mb-3 
-            .position-relative.d-inline-block
-              img(src="assets/img/promo-detail-logo.png", alt="alt")
-              button.bg-transparent.border-0.p-0.remove-img-icon 
-                img(src="assets/img/cancle-cycle.png", alt="alt")
+          //- .mb-3 
+          //-   .position-relative.d-inline-block
+          //-     img(src="assets/img/promo-detail-logo.png", alt="alt")
+          //-     button.bg-transparent.border-0.p-0.remove-img-icon 
+          //-       img(src="assets/img/cancle-cycle.png", alt="alt")
 
           .mb-3
-             +textFocus('Nội dung bài viết', true, 'Nhập nội dung bài viết')
+             +textFocus('Nội dung bài viết', false, 'Nhập nội dung bài viết')
     
       .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
         .row

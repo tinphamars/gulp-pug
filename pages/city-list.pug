@@ -5,15 +5,15 @@ include includes/country/modal-search.pug
 doctype html
 html(lang="en")
   
-  +docType("Country list | HYO")
+  +docType("Danh sách tỉnh thành phố | HYO")
 
   body
     section.main
-      +headers('Tỉnh/Thành phố')
+      +headers('Tỉnh/ Thành phố', '71 Tỉnh/ Thành phố')
       include includes/country/city-list.pug
       include includes/add.pug
 
-    +modalSearchLocal('Tra cứu Tỉnh/thành phố', 2)
+    +modalSearchLocal('Tra cứu tỉnh/ thành phố', 2)
     include includes/crypto/modal-confirm-active.pug
     include includes/js.pug
 

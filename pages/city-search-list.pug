@@ -1,5 +1,6 @@
 include includes/header.pug
 include includes/style.pug
+include includes/count-result.pug
 include includes/country/modal-search.pug
 
 doctype html
@@ -10,9 +11,11 @@ html(lang="en")
   body
     section.main
       +headers("Tỉnh/ Thành phố", "71 Tỉnh/ Thành phố")
-      include includes/search-no-result.pug
+      include includes/search-title.pug
+      include includes/country/city-list.pug
       include includes/add.pug
 
     +modalSearchLocal('Tra cứu tỉnh/ thành phố', 2)
+    include includes/crypto/modal-confirm-active.pug
     include includes/js.pug
 

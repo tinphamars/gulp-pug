@@ -1,6 +1,7 @@
 include includes/header.pug
 include includes/style.pug
 include includes/count-result.pug
+include includes/country/modal-search.pug
 
 doctype html
 html(lang="en")
@@ -9,11 +10,12 @@ html(lang="en")
  
   body
     section.main
-      +headers("Quốc gia", "250 quốc gia")
-      +countResult('10 Quốc gia') 
+      +headers("Quốc gia", "250 Quốc gia")
+      include includes/search-title.pug
       include includes/country/list.pug
       include includes/add.pug
 
-    include includes/promo/modal-search.pug
+    +modalSearchLocal('Tra cứu quốc gia', 1)
+    include includes/crypto/modal-confirm-active.pug
     include includes/js.pug
 

@@ -1,15 +1,17 @@
 include includes/header.pug
 include includes/style.pug
 include includes/country/modal-search.pug
+include includes/count-result.pug
 
 doctype html
 html(lang="en")
   
-  +docType("Danh sách quận huyện | HYO")
+  +docType("Kết quả tìm kiếm | HYO")
 
   body
     section.main
       +headers('Quận/ Huyện', '713 Quận/ Huyện')
+      include includes/search-title.pug
       include includes/country/district-list.pug
       include includes/add.pug
     

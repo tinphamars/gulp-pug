@@ -1,7 +1,7 @@
 mixin promoCodeModal(titleModal, holder, idModal)
   .offcanvas.offcanvas-bottom.offcanvas-with-radius(id=idModal, style="z-index: 1111; height:auto; max-height: 80vh;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
       .offcanvas-body
-        .text-center
+        .text-center.mb-60
           img(src="assets/img/line-width-50.png", alt="line x")
           div.mt-3
             h3.fw-600.font-16.color-bl=titleModal
@@ -32,3 +32,17 @@ mixin promoCodeModal(titleModal, holder, idModal)
                 span Tất cả 
                 .form-check
                   input.form-check-input#flexCheckDefault(type="checkbox")
+            li.list-group-item 
+              .d-flex.justify-content-between.align-items-center
+                span Tất cả 
+                .form-check
+                  input.form-check-input#flexCheckDefault(type="checkbox")
+            li.list-group-item 
+              .d-flex.justify-content-between.align-items-center
+                span Tất cả 
+                .form-check
+                  input.form-check-input#flexCheckDefault(type="checkbox")
+         
+        .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+          button.btn.w-100.btn-blue Lưu
+          

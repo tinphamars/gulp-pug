@@ -1,3 +1,14 @@
+.modal.fade#modalConfirmUnActiveCrypto(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered.modal-sm-custom
+    .modal-content
+      .modal-body(style="padding: 35px 16px") 
+        .d-flex.justify-content-center.text-center.align-items-center
+          img.padding-r-5(src="assets/img/exclamation.png") 
+          span.fw-600.font-16 Bạn có chắc muốn hoạt động lại?
+        .d-flex.justify-content-between.mt-4.fw-600
+          button.btn.btn-outline-secondary.btn-confirm-crypto(data-bs-dismiss="modal" aria-label="Close") Huỷ
+          button.btn.btn-blue.btn-confirm-crypto Đồng ý
+
 .modal.fade#modalConfirmActiveCrypto(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
   .modal-dialog.modal-dialog-centered.modal-sm-custom
     .modal-content

@@ -5,22 +5,22 @@ include form/form.pug
 doctype html
 html(lang="en")
 
-  +docType("Country Edit Page")
+  +docType("Chỉnh sửa tỉnh thành phố | HYO")
 
   body
     section.main
-      +headerDetail('Thông tin quốc gia')
+      +headerDetail('Thông tin tỉnh/ thành phố')
 
       .w-with-padding.mt-3.color-bl
         form(action="") 
           .mb-3
-            +text('Tên tỉnh/thành phố (VI)', true, 'Hà Nội')
-
+            +text('Tên tỉnh/ thành phố (VI)', true, 'Hà Nội')
+ 
           .mb-3
-            +text('Tên tỉnh/thành phố (EN)', true, 'Ha noi')
+            +text('Tên tỉnh/ thành phố (EN)', true, 'Ha noi')
           
           .mb-3
-           +text('Mã tỉnh/thành phố', true, '')
+           +text('Mã tỉnh/ thành phố', true, '')
 
           .mb-3
             +select('Quốc gia', true)

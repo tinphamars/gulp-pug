@@ -83,7 +83,7 @@ body {
 }
 
 .btn-waiting {
-  padding: 7px 31px;
+  padding: 7px 10px;
   background: #ffeedf;
   border: 1px solid #fb7604;
   border-radius: 5px;
@@ -492,6 +492,12 @@ body {
   padding: 4px 10px;
   background: #0770cd;
   color: #ffffff;
+}
+
+.btn-city-outline {
+  padding: 4px 10px;
+  border: 1px solid #0770cd;
+  color: #0770CD;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -993,4 +999,8 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
 }

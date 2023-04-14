@@ -1,8 +1,22 @@
-mixin text(label, required, placeholder)
+mixin text(label, required, placeholder, disable)
   label.form-label=label
     if required
       span.text-danger  *
   input.form-control.form-control-root(type="text", placeholder=placeholder)
+
+mixin textDisable(label, required, placeholder)
+  label.form-label=label
+    if required
+      span.text-danger  *
+  input.form-control.form-control-root(type="text", placeholder=placeholder, disabled)
+
+mixin textCount(label, required, placeholder)
+  label.form-label=label
+    if required
+      span.text-danger  *
+  input.form-control.form-control-root(type="text", placeholder=placeholder)
+  .text-end.mt-1 
+      span.color-gray 0/100
 
 mixin date(label, required)
   label.form-label(for="cryptoInputText2")=label

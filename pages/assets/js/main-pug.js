@@ -30,8 +30,15 @@ textareaForm &&
 // modal when change active field
 var cryptoActive = document.getElementsByClassName("crypto-active");
 var confirmModalElement = document.getElementById("modalConfirmActiveCrypto");
+var modalConfirmUnActiveCrypto = document.getElementById("modalConfirmUnActiveCrypto");
 if (confirmModalElement) {
   var confirmModal = new bootstrap.Modal(confirmModalElement, {
+    keyboard: false,
+  });
+}
+
+if (modalConfirmUnActiveCrypto) {
+  var confirmModalUn = new bootstrap.Modal(modalConfirmUnActiveCrypto, {
     keyboard: false,
   });
 }
@@ -41,6 +48,8 @@ if (cryptoActive.length > 0) {
     element.addEventListener("change", (e) => {
       if (!e.target.checked) {
         confirmModal && confirmModal.show();
+      }else {
+        confirmModalUn && confirmModalUn.show();
       }
     });
   });

@@ -5,22 +5,22 @@ include form/form.pug
 doctype html
 html(lang="en")
 
-  +docType("City Add Page")
+  +docType("Thêm mới tỉnh thành phố | HYO")
 
   body
     section.main
-      +headerDetail('Tỉnh/ Thành phố')
+      +headerDetail('Thông tin tỉnh/ thành phố')
 
       .w-with-padding.mt-3.color-bl
         form(action="") 
           .mb-3
-            +text('Tên tỉnh/thành phố (VI)', true, '')
+            +text('Tên tỉnh/ thành phố (VI)', true, '')
 
           .mb-3
-            +text('Tên tỉnh/thành phố (EN)', true, '')
+            +text('Tên tỉnh/ thành phố (EN)', true, '')
           
           .mb-3
-           +text('Mã tỉnh/thành phố', true, '')
+           +text('Mã tỉnh/ thành phố', true, '')
 
           .mb-3
             +select('Quốc gia', true)

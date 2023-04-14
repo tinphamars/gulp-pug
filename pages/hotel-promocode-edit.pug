@@ -6,11 +6,11 @@ include includes/style.pug
 doctype html
 html(lang="en")
   
-  +docType("Thêm khuyến mãi mới")
+  +docType("Chỉnh sửa khuyến mãi | HYO")
 
   body
     section.main
-      +headerDetail('Thêm khuyến mãi mới')
+      +headerDetail('Chỉnh sửa khuyến mãi')
       
       .w-with-padding.mt-3.color-bl.mb-sub-button
         form(action="") 
@@ -230,11 +230,11 @@ html(lang="en")
           .col-6
             button.btn.w-100.btn-outline-primary.btn-h-48(data-bs-toggle="modal" data-bs-target="#modalPreview") Xem trước
           .col-6
-            button.btn.w-100.btn-blue.btn-h-48 Tạo khuyến mãi
+            button.btn.w-100.btn-blue.btn-h-48 Cập nhật
 
     +promoCodeModal('Khách sạn','Nhập khách sạn cần tìm', 'offcanvasListHotel')
     +promoCodeModal('Thành phố','Nhập thành phố cần tìm', 'offcanvasListCity')
-    +promoCodeModal('Đối tác','Nhập đối tác cần tìm', 'offcanvasListPartner')
+    +promoCodeModal(' Nhà cung cấp dịch vụ','Nhập đối tác cần tìm', 'offcanvasListPartner')
 
     include includes/promo/preview.pug
     include includes/promo/modal-partner-payment.pug

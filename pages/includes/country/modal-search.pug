@@ -11,18 +11,18 @@ mixin modalSearchLocal(titleSearch, type)
           form
             if type == 3
               .mb-3
-                +select('Tên quận huyện', false)
+                +select('Quận/ Huyện', false)
               .mb-3
-                +select('Mã quận huyện', false)
+                +select('Mã quận/ huyện', false)
               .mb-3
-                +select('Tỉnh thành phố', false)
+                +select('Tỉnh/ Thành phố', false)
             if type == 2
               .mb-3
-                +select('Tên Tỉnh/Thành phố', false)
+                +select('Tỉnh/ Thành phố', false)
               .mb-3
-                +select('Mã Tỉnh/ Thành phố', false)
+                +select('Mã tỉnh/ thành phố', false)
             .mb-3
-              +select('Tên quốc gia', false)
+              +select('Quốc gia', false)
             if type == 1 
               .mb-3
                 +select('Mã quốc gia', false)
