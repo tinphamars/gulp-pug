@@ -1,0 +1,223 @@
+include includes/header-detail.pug
+include includes/promo/modal-choose.pug
+include form/form.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+
+  +docType("Flight - chỉnh sửa khuyến mãi | HYO")
+
+  body
+    section.main
+      +headerDetail('Chỉnh sửa khuyến mãi')
+      
+      .w-with-padding.mt-3.color-bl.mb-sub-button
+        form(action="") 
+          .mb-3
+            +select('Phân hệ', true)
+
+          .mb-3
+            +select('Loại khuyến mãi', true )
+          
+          .mb-3
+           +textCount('Tên chương trình khuyến mãi', true, '')
+
+          .mb-3
+            +textarea('Nội dung khuyến mãi', 5, true, false, '')
+          
+          .mb-3
+            +text('Mã khuyến mãi', true, '')
+          
+          .mb-3
+            +text('Mã chương trình', true, '')
+          
+          .mb-3
+            +select('Trạng thái', true )
+          
+          .mb-3
+            .d-flex.flex-column.align-items-start.mb-2
+              label.form-label.mb-0(for="cryptoInputEmail5") Hình ảnh cover
+                span.text-danger  *
+              span.font-12.color-gray Dimension (1242 x 464) Max 500KB
+            .d-block
+              input#inputGroupFile02(type="file" hidden="true")
+              label.input-group-text.btn.btn-img-upload.fw-600(for="inputGroupFile02")
+                img.padding-r-10(src="assets/img/add-img.png", alt="") 
+                span Tải ảnh
+          
+          .mb-3
+            .d-flex.flex-column.align-items-start.mb-2
+              label.form-label.mb-0(for="cryptoInputEmail5") Hình ảnh logo
+                span.text-danger  *
+              span.font-12.color-gray Dimension (1242 x 464) Max 500KB
+            .d-block
+              input#inputGroupFile02(type="file" hidden="true")
+              label.input-group-text.btn.btn-img-upload.fw-600(for="inputGroupFile02")
+                img.padding-r-10(src="assets/img/add-img.png", alt="") 
+                span Tải ảnh
+
+          hr.my-4
+        
+          h3.fw-600.font-16.mb-4 Thiết lập khuyến mãi
+          .mb-3
+              span.form-check-label.padding-r-10(for="flexCheckDef  ault") Tự động apply
+              input.form-check-input#flexCheckDefault(type="checkbox")
+          
+          .mb-3
+              span Kiểu hiển thị trên ứng dụng 
+                span.text-danger *
+          .row.mb-3.color-gray
+            .col-6
+              .form-check
+                input.form-check-input#flexRadioDefault_route_1(type="radio", name="flexRadioDefaultName_route")
+                label.form-check-label(for="flexRadioDefault_route_1") Hiển thị trong danh sách
+            .col-6
+              .form-check
+                input.form-check-input#flexRadioDefault_route_2(type="radio", name="flexRadioDefaultName_route")
+                label.form-check-label(for="flexRadioDefault_route_2") Nhập mã để tìm
+
+          .mb-3
+            label.form-label(for="basic-url") Đường dẫn hiển thị
+              span.text-danger *
+            .input-group
+              span.input-group-text.bg-white https://heyotrip.com/
+              input.form-control.form-control-root#basic-url(type="text", aria-describedby="basic-addon3")
+
+          .mb-3
+            label.form-label(for="cryptoInputText2") Ngày bắt đầu
+            input.form-control.form-control-root#cryptoInputText2(type="date")
+          
+          .mb-3
+            label.form-label(for="cryptoInputText2") Ngày kết thúc
+            input.form-control.form-control-root#cryptoInputText2(type="date")
+          
+          .mb-3
+            label.form-label(for="cryptoInputText2") Số lượng phát hành
+              span.text-danger  *
+            input.form-control.form-control-root#cryptoInputText2(type="text")
+          
+          .mb-3
+            label.form-label(for="cryptoInputText2") Giới hạn sử dụng trong ngày
+              span.text-danger  *
+            input.form-control.form-control-root#cryptoInputText2(type="text")
+          
+          .row.mb-3
+            label.form-label(for="cryptoInputText2") Loại giảm giá
+              span.text-danger *
+            .col-6
+              .form-check
+                input.form-check-input#flexRadioDefault_discount_1(type="radio", checked="true", name="flexRadioDefaultName_discount", value="1")
+                label.form-check-label(for="flexRadioDefault_discount_1") Giảm giá cố định
+            .col-6
+              .form-check
+                input.form-check-input#flexRadioDefault_discount_2(type="radio", name="flexRadioDefaultName_discount", value="2")
+                label.form-check-label(for="flexRadioDefault_discount_2") Giảm giá theo phần trăm(%)
+          
+          .mb-3.discount-number.show-discount
+            label.form-label Mức tiền giảm
+            .form-input-control
+              input.form-control.form-control-root(type="text", aria-describedby="textHelp", value="0") 
+              div.text-end-input 
+                span VND
+
+          .mb-3.discount-percent
+            label.form-label Mức giảm theo phần trăm %
+            .form-input-control.mb-3
+              input.form-control.form-control-root(type="text", aria-describedby="textHelp", value="0") 
+            .discount-number.show-discount
+              label.form-label Mức tiền giảm tối đa
+              .form-input-control
+                input.form-control.form-control-root(type="text", aria-describedby="textHelp", value="0") 
+                div.text-end-input 
+                  span VND
+        
+          .d-flex.justify-content-between.align-items-center.mb-2
+            span Nhà cung cấp dịch vụ
+              span.text-danger *
+            .btn.text-main.fw-600 Xoá hết
+          .mb-3 
+            span.color-gray.font-12 Các đối tác cung cấp dịch vụ trên hệ thống cho Heyotrip
+          .mb-3(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListPartner", aria-controls="offcanvasBottom")
+            .border.border-1.rounded-3.p-2
+              .btn.btn-city VJ
+              .btn.btn-city HPL
+              .btn.btn-city TVP
+              .btn.btn-city EZC
+          
+          .d-flex.justify-content-between.align-items-center.mb-2
+            span Đối tác thanh toán
+              span.text-danger *
+            .btn.text-main.fw-600 Xoá hết
+          .mb-3 
+            span.color-gray.font-12 Các đối tác cung cấp dịch vụ trên hệ thống cho Heyotrip
+          .mb-3(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListPartnerPayment", aria-controls="offcanvasBottom")
+            .border.border-1.rounded-3.p-2
+              .btn.btn-city VCB
+              .btn.btn-city ACB
+              .btn.btn-city HSBC
+              .btn.btn-city TP Bank
+          
+          .mb-3
+            label.form-label(for="textarea-content") Nội dung tóm tắt mã khuyến mãi
+              span.text-danger *
+            textarea.form-control#textarea-content(rows="5")
+              
+          hr.my-4
+
+          h3.font-16.fw-600.mb-4 Điều kiện áp dụng đơn hàng
+
+          .mb-3
+            +select('Quốc gia đi', false )
+          .mb-3
+            +select('Quốc gia đến', false )
+          .mb-3
+            +select('Thành phố đi', false )
+          .mb-3
+            +select('Thành phố đến', false )
+          .mb-3
+            +select('Sân bay đi', false )
+          .mb-3
+            +select('Sân bay đến', false )
+          .mb-3
+            +date('Khởi hành từ:', true )
+          .mb-3
+            +date('Khởi hành đến:', true )
+        
+          .mb-3
+            label.form-label(for="cryptoInputText2") Giá trị đơn hàng tối thiểu phải đạt
+            .form-check.mb-2
+              input.form-check-input#flexRadioDefaultNoLimit(type="radio", name="flexRadioDefaultName")
+              label.form-check-label.color-gray(for="flexRadioDefaultNoLimit") Không giới hạn
+            .form-input-control
+              input.form-control.form-control-root#cryptoInputText5(type="text", aria-describedby="textHelp", value="0") 
+              div.text-end-input 
+                span VND
+          
+          .mb-3
+            label.form-label(for="cryptoInputText2") Số lượng khách tối thiểu 
+              span.text-danger *
+            input.form-control.form-control-root#cryptoInputText2(type="text", value="0")
+          
+          .mb-3
+            label.form-label(for="exampleFormControlTextarea_11") Nội dung điều kiện
+              span.text-danger *
+            textarea.form-control#exampleFormControlTextarea_11(rows="5", placeholder="Nhập nội dung")
+    
+      .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+        .row
+          .col-6
+            button.btn.w-100.btn-outline-primary.btn-h-48(data-bs-toggle="modal" data-bs-target="#modalPreview") Xem trước
+          .col-6
+            button.btn.w-100.btn-blue.btn-h-48 Tạo khuyến mãi
+
+    +promoCodeModal('Khách sạn','Nhập khách sạn cần tìm', 'offcanvasListHotel')
+    +promoCodeModal('Thành phố','Nhập thành phố cần tìm', 'offcanvasListCity')
+    +promoCodeModal('Đối tác','Nhập đối tác cần tìm', 'offcanvasListPartner')
+
+    include includes/promo/preview.pug
+    include includes/promo/modal-partner-payment.pug
+    include includes/modal-notify.pug
+    include includes/js.pug
+    
+    

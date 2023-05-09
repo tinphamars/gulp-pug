@@ -5,6 +5,7 @@ const nodeSass = require("node-sass");
 const sass = gulpSass(nodeSass);
 const pug = require("gulp-pug");
 const browserSync = require("browser-sync").create();
+const changed = require('gulp-changed');
 
 const FilesPath = {
   scssFiles: "pages/**/css/*.scss",
@@ -15,8 +16,9 @@ const FilesPath = {
 
 function htmlTask() {
   return src(FilesPath.htmlFiles)
+    .pipe(changed('dist', {extension: ['.html', '.pug']}))
     .pipe(pug({ pretty: true, force: true }))
-    .pipe(dest("dist"))
+    .pipe(dest('dist'))
     .pipe(browserSync.stream());
 }
 

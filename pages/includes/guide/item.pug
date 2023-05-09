@@ -1,20 +1,26 @@
-mixin guideItem(activeTrue)
+mixin guideItem(activeTrue, outside)
   .card-crypto.mb-3.bg-gray.border.p-3.bd-5px
     .d-flex.justify-content-between.align-items-center.mb-4
-      a.font-16.color-bl.fw-600.text-decoration-none(href="#") 01: Hà Nội
+      a.font-16.color-bl.fw-600.text-decoration-none(href="#") 
+        if(outside) 
+          | 01: Hàn Quốc
+        else 
+          | 01: Hà Nội
       .form-check.form-switch
-        if activeTrue
+        if (activeTrue)
           input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch" checked="true")
         else 
           input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch")
 
     a.d-block.text-decoration-none.mb-3(href="#")
-      //- .d-flex.justify-content-between.align-items-center.color-gray.mb-2
-      //-   span.fw-500 Chủ đề:
-      //-   span.text-black.fw-600 Topic-Hotel-HD-MDL-1
-      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
-        span.fw-500 Quốc gia:
-        span.text-black.fw-600 Việt Nam
+      if(outside)
+        .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+          span.fw-500 Chủ đề:
+          span.text-black.fw-600 QGNT Hàn Quốc
+      else 
+        .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+          span.fw-500 Quốc gia:
+          span.text-black.fw-600 Việt Nam
       .d-flex.justify-content-between.align-items-center.color-gray.mb-2
         span.fw-500 Ngôn ngữ:
         span.text-black.fw-600 Tiếng Việt

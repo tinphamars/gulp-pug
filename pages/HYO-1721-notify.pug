@@ -1,0 +1,58 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Hoàn tiền | HYO")
+
+  body
+    section.main
+      +headers('Flight - Hoàn tiền', '')
+
+      ul.list-group.list-group-flush
+        li.list-group-item 
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#modalCancelInSuccessOut") Hoàn tiền thành công trực tiếp
+        li.list-group-item 
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#modalCancelInFail") Hoàn tiền thất bại !
+      
+    .modal.fade#modalCancelInSuccessOut(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog.modal-dialog-centered.modal-sm-custom
+        .modal-content
+          .modal-body.color-bl(style="padding: 16px")
+            img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
+            .mt-3.text-center 
+              .mb-1 
+                img(src="assets/img/cancel-success.png", alt="")
+              .mb-3  
+                span.text-complete.fw-600.font-18 Hoàn tiền thành công !
+              .mb-3  
+                span Bạn vừa hoàn tiền thành công cho chuyến bay
+              .d-block 
+                span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN)
+                  <br>
+                  | 19h30 24/12/2022.
+
+    .modal.fade#modalCancelInFail(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog.modal-dialog-centered.modal-sm-custom
+        .modal-content
+          .modal-body.color-bl(style="padding: 16px")
+            img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
+            .mt-3.text-center 
+              .mb-1 
+                img(src="assets/img/cancel-fail.png", alt="")
+              .mb-3  
+                span.text-danger.fw-600.font-18 Hoàn tiền thất bại !
+              .mb-3  
+                span Bạn vừa hoàn tiền thất bại chuyến bay
+              .mb-3
+                span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN)
+                  <br>
+                  | 19h30 24/12/2022.
+              .d-block   
+                span Vui lòng kiểm tra lại điều kiện
+                  <br>
+                  | hoàn tiền & thử lại sau ít phút
+
+    include includes/js.pug
+

@@ -1,0 +1,498 @@
+include includes/hotel/header.pug
+include includes/promo/modal-choose.pug
+include form/form.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+
+  +docType("Flight - thêm mới khuyến mãi | HYO")
+
+  body
+    section.main
+      +headerDetail('Thêm mới khách sạn')
+      
+      .w-with-padding.mt-3.color-bl.mb-sub-button
+        .tab-content#myTabContent
+          .tab-pane.fade.show.active#home-tab-pane(role="tabpanel", aria-labelledby="home-tab", tabindex="0")
+            .mb-3
+              h3.font-16.fw-600 Thông tin chung
+            .mb-3
+              +select('Loại chỗ nghỉ', true)
+            .mb-3
+              +textHasSubLabel('Tên chỗ nghỉ', true, '', 'Tên này sẽ được hiển thị khi khách hàng tìm kiếm chỗ nghỉ')
+            .mb-3 
+              +start('Hạng sao', true)
+            .mb-3
+              +text('Địa chỉ', true, 'Nhập địa chỉ', false)
+            .mb-3
+              +select('Quốc gia', true)
+            .mb-3 
+              +select('Tỉnh/Thành phố', true)
+            .mb-3 
+              +select('Quận/Huyện', true)
+            .mb-3 
+              +text('Mã bưu chính', true, '')
+            .mb-3 
+              label.form-label Toạ độ
+              .lat-log-input.d-flex.justify-content-between.align-items-center
+                span 10.86789; 15.1234
+                button.btn-marker Ghim trên bản đồ
+            .mb-3 
+              +phone('Số điện thoại', false)
+            .mb-3
+              +text('Email', false, '')
+            .mb-3
+              +timeWithHour('Giờ nhận phòng', true, '')
+            .mb-3
+              +timeWithHour('Giờ trả phòng', true, '')
+            hr
+            .mb-3 
+              .d-flex.justify-content-between.align-items-center.mb-1
+                span.fw-600.font-16 Tiện nghi chung chỗ nghỉ 
+                  span.color-gray.font-12.fw-500  (Đã chọn: 8)
+                .btn.text-main.fw-600 Xoá hết
+              div(data-bs-toggle="offcanvas", data-bs-target="#offcanvasFacility", aria-controls="offcanvasBottom")
+                .border.border-1.rounded-3.p-2
+                  .overflow-x-scroll
+                    .btn.btn-city Quầy bar
+                    .btn.btn-city Wifi miễn phí
+                    .btn.btn-city Thang máy
+                    .btn.btn-city Máy điều hòa
+            hr
+            .mb-5
+              .d-flex.justify-content-between.align-items-center.mb-1
+                span.fw-600.font-16 Ngôn ngữ
+                  span.color-gray.font-12.fw-500  (Đã chọn: 3)
+                .btn.text-main.fw-600 Xoá hết
+              div(data-bs-toggle="offcanvas", data-bs-target="#offcanvasLanguage", aria-controls="offcanvasBottom")
+                .border.border-1.rounded-3.p-2
+                  .overflow-x-scroll
+                    .btn.btn-city Tiếng Việt
+                    .btn.btn-city Tiếng Anh
+                    .btn.btn-city Tiếng Trung
+            .mb-3
+              .h3.fw-600.font-16 Thông tin giới thiệu
+            .mb-3 
+              +textarea('Giới thiệu chỗ nghỉ', '7', false, false, 'Nhập thông tin giới thiệu')
+            .mb-3 
+              +textarea('Chính sách quy định', '7', false, false, 'Nhập thông tin quy đinh')
+            .mb-3 
+              label.form-label Điểm lân cận
+              .row 
+                .col-6
+                  h5.font-14.fw-600 Địa điểm
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập địa điểm")
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập địa điểm")
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập địa điểm")
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập địa điểm")
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập địa điểm")
+                    
+                .col-6
+                  h5.font-14.fw-600 Khoảng cách
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập khoảng cách")
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập khoảng cách")
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập khoảng cách")
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập khoảng cách")
+                  .mb-1
+                    input.form-control(type="text", aria-describedby="textHelp" placeholder="Nhập khoảng cách")
+
+          .tab-pane.fade#profile-tab-pane(role="tabpanel", aria-labelledby="profile-tab", tabindex="0")
+            .mb-3
+              h3.font-16.fw-600 Thông tin chung
+            .mb-3
+              +select('Loại phòng', true)
+            .mb-3
+              +select('Số lượng phòng', true)
+            .mb-3
+              +select('Số lượng khách tối đa 1 phòng', true)
+            .mb-3
+              +inputTextEnd('Diện tích phòng', false, '', 'm2' ,false)
+            .mb-3
+              +select('Đối tác cung cấp', true)
+            .mb-3
+              +text('Hoa hồng Heyotrip nhận được', true, '10%', false)
+            .mb-3 
+              label.form-label Tên phòng
+                span.text-danger  *
+              .mb-2
+                span.font-12.color-gray Tên này sẽ được hiển thị khi khách hàng chọn phòng. Hãy chọn tên miêu tả chính xác nhất
+              .mb-2
+                +selectNotLabel()
+              .mb-2
+                +selectNotLabel()
+              .mb-2
+                +selectNotLabel()
+              .mb-2
+                input.form-control.form-control-root(type="text", placeholder='Phòng giường đôi Deluxe Nhìn ra biển')
+              .mb-3 
+                .d-flex.justify-content-between.align-items-center.mb-1
+                  span.fw-600.font-16 Tiện nghi phòng
+                    span.color-gray.font-12.fw-500  (Đã chọn: 1)
+                  .btn.text-main.fw-600 Xoá hết
+                div(data-bs-toggle="offcanvas", data-bs-target="#offcanvasFacilityRoom", aria-controls="offcanvasBottom")
+                  .border.border-1.rounded-3.p-2
+                    .overflow-x-scroll
+                      .btn.btn-city Tiện nghi phòng 1
+                      .btn.btn-city Tiện nghi phòng 2
+                      .btn.btn-city Tiện nghi phòng 3
+              hr
+              .mb-3 
+                .d-flex.justify-content-between.align-items-center.mb-1
+                  span.fw-600.font-16 Tiện nghi phòng
+                    span.color-gray.font-12.fw-500  (Đã chọn: 1)
+                  .btn.text-main.fw-600 Xoá hết
+                div(data-bs-toggle="offcanvas", data-bs-target="#offcanvasFacilityBedRoom", aria-controls="offcanvasBottom")
+                  .border.border-1.rounded-3.p-2
+                    .overflow-x-scroll
+                      .btn.btn-city Bồn tắm
+                      .btn.btn-city Vòi sen
+                      .btn.btn-city Khăn tắm
+                      .btn.btn-city Dép
+                      .btn.btn-city Đồ vệ sinh cá nhân miễn phí
+              hr
+              .mb-3 
+                label.form-label.fw-600.font-16 Tiện nghi phòng
+                input.form-control.form-control-root(type="text", placeholder='Chọn tầm nhìn phòng')
+
+              hr
+              .mb-3 
+                h3.fw-600.font-16 Loại giường 
+                  span.text-danger  *
+              .mb-3 
+                +select2Label('Giường đơn', '(Rộng 90 - 130 cm)')                
+              .mb-3 
+                +select2Label('Giường đôi', '(Rộng 90 - 130 cm)')
+              .mb-3 
+                +select2Label('Giường cỡ Queen', '(Rộng 160 - 180 cm)')              
+              .mb-3 
+                +select2Label('Giường cỡ King', '(Rộng 180 - 210 cm)')    
+              .mb-3 
+                +select('Giường cỡ King', false) 
+              .mb-3 
+                +select('Giường sofa', false) 
+              .mb-5 
+                +select('Nệm futon', false)     
+              .mb-3 
+                h3.fw-600.font-16 Chính sách giá phòng
+              .mb-3
+                label.form-label Giá cơ bản (1phòng/ 1đêm)
+                  span.text-danger &nbsp;*
+                +dropdownInput('16.000')
+              .mb-3
+                +text('Thuế', true)
+              .mb-3
+                +text('Phí dịch vụ', true)
+              hr
+              .mb-3
+                .d-flex.justify-content-between.align-items-center
+                  h3.fw-600.font-16 Giá phòng giảm theo số lượng khách
+                  +switchButton()
+              .mb-3
+                ul.list-group
+                  li.list-group-item
+                    .d-flex.justify-content-between.align-items-center
+                      .text-center.align-middle.w-333 
+                        span 4 khách
+                      .text-center.align-middle.w-333 
+                          span 0%
+                      .text-center.align-middle.w-333 
+                        span 135.000 VND
+                  li.list-group-item
+                    .d-flex.justify-content-between.align-items-center
+                      .text-center.align-middle.w-333 
+                        span 4 khách
+                      .text-center.align-middle.w-333 
+                          span 0%
+                      .text-center.align-middle.w-333 
+                        span 135.000 VND
+                  li.list-group-item
+                    .d-flex.justify-content-between.align-items-center
+                      .text-center.align-middle.w-333 
+                        span 4 khách
+                      .text-center.align-middle.w-333 
+                          span 0%
+                      .text-center.align-middle.w-333 
+                        span 135.000 VND
+                  li.list-group-item
+                    .d-flex.justify-content-between.align-items-center
+                      .text-center.align-middle.w-333 
+                        span 4 khách
+                      .text-center.align-middle.w-333 
+                          span 0%
+                      .text-center.align-middle.w-333 
+                        span 135.000 VND
+                  li.list-group-item A third item
+                  li.list-group-item A fourth item
+                  li.list-group-item And a fifth one
+                
+                
+                //- table.table
+                //-   thead
+                //-     tr
+                //-       th.text-center(scope="col") Số lượng khách
+                //-       th.text-center(scope="col") Giá giảm
+                //-       th.text-center(scope="col") Giá phòng/đêm
+                //-   tbody
+                //-     tr
+                //-       td.text-center.align-middle
+                //-         span 4 khách
+                //-       td.text-center.align-middle 
+                //-          span 0%
+                //-       td.text-center.align-middle
+                //-         span 135.000 VND
+                //-     tr
+                //-       td.text-center.align-middle
+                //-         span 3 khách
+                //-       td.text-center.align-middle 
+                //-         input.form-control(type="text", value="10%")
+                //-       td.text-center.align-middle
+                //-         span 135.000 VND
+                //-     tr
+                //-       td.text-center.align-middle
+                //-         span 2 khách
+                //-       td.text-center.align-middle 
+                //-         input.form-control(type="text", value="10%")
+                //-       td.text-center.align-middle
+                //-         span 135.000 VND
+                //-     tr
+                //-       td.text-center.align-middle
+                //-         span 1 khách
+                //-       td.text-center.align-middle 
+                //-         input.form-control(type="text", value="10%")
+                //-       td.text-center.align-middle
+                //-         span 135.000 VND
+
+              .mb-3
+                .d-flex.justify-content-between.align-items-center
+                  h3.fw-600.font-16 Chính sách giá phòng  
+                  +switchButton()
+            
+
+          .tab-pane.fade#contact-tab-pane(role="tabpanel", aria-labelledby="contact-tab", tabindex="0")
+            .mb-3
+              +select('Phân hệ', true)
+            .mb-3
+              +select('Loại khuyến mãi', true)
+            
+
+
+        form(action="") 
+          .mb-3
+            +select('Phân hệ', true)
+
+          .mb-3
+            +select('Loại khuyến mãi', true )
+          
+          .mb-3
+           +textCount('Tên chương trình khuyến mãi', true, '')
+
+          .mb-3
+            +textarea('Nội dung khuyến mãi', 5, true, false, '')
+          
+          .mb-3
+            +text('Mã khuyến mãi', true, '')
+          
+          .mb-3
+            +text('Mã chương trình', true, '')
+          
+          .mb-3
+            +select('Trạng thái', true )
+          
+          .mb-3
+            .d-flex.flex-column.align-items-start.mb-2
+              label.form-label.mb-0(for="cryptoInputEmail5") Hình ảnh cover
+                span.text-danger  *
+              span.font-12.color-gray Dimension (1242 x 464) Max 500KB
+            .d-block
+              input#inputGroupFile02(type="file" hidden="true")
+              label.input-group-text.btn.btn-img-upload.fw-600(for="inputGroupFile02")
+                img.padding-r-10(src="assets/img/add-img.png", alt="") 
+                span Tải ảnh
+          
+          .mb-3
+            .d-flex.flex-column.align-items-start.mb-2
+              label.form-label.mb-0(for="cryptoInputEmail5") Hình ảnh logo
+                span.text-danger  *
+              span.font-12.color-gray Dimension (1242 x 464) Max 500KB
+            .d-block
+              input#inputGroupFile02(type="file" hidden="true")
+              label.input-group-text.btn.btn-img-upload.fw-600(for="inputGroupFile02")
+                img.padding-r-10(src="assets/img/add-img.png", alt="") 
+                span Tải ảnh
+
+          hr.my-4
+        
+          h3.fw-600.font-16.mb-4 Thiết lập khuyến mãi
+          .mb-3
+              span.form-check-label.padding-r-10(for="flexCheckDef  ault") Tự động apply
+              input.form-check-input#flexCheckDefault(type="checkbox")
+          
+          .mb-3
+              span Kiểu hiển thị trên ứng dụng 
+                span.text-danger *
+          .row.mb-3.color-gray
+            .col-6
+              .form-check
+                input.form-check-input#flexRadioDefault_route_1(type="radio", name="flexRadioDefaultName_route")
+                label.form-check-label(for="flexRadioDefault_route_1") Hiển thị trong danh sách
+            .col-6
+              .form-check
+                input.form-check-input#flexRadioDefault_route_2(type="radio", name="flexRadioDefaultName_route")
+                label.form-check-label(for="flexRadioDefault_route_2") Nhập mã để tìm
+
+          .mb-3
+            label.form-label(for="basic-url") Đường dẫn hiển thị
+              span.text-danger *
+            .input-group
+              span.input-group-text.bg-white https://heyotrip.com/
+              input.form-control.form-control-root#basic-url(type="text", aria-describedby="basic-addon3")
+
+          .mb-3
+            label.form-label(for="cryptoInputText2") Ngày bắt đầu
+            input.form-control.form-control-root#cryptoInputText2(type="date")
+          
+          .mb-3
+            label.form-label(for="cryptoInputText2") Ngày kết thúc
+            input.form-control.form-control-root#cryptoInputText2(type="date")
+          
+          .mb-3
+            label.form-label(for="cryptoInputText2") Số lượng phát hành
+              span.text-danger  *
+            input.form-control.form-control-root#cryptoInputText2(type="text")
+          
+          .mb-3
+            label.form-label(for="cryptoInputText2") Giới hạn sử dụng trong ngày
+              span.text-danger  *
+            input.form-control.form-control-root#cryptoInputText2(type="text")
+          
+          .row.mb-3
+            label.form-label(for="cryptoInputText2") Loại giảm giá
+              span.text-danger *
+            .col-6
+              .form-check
+                input.form-check-input#flexRadioDefault_discount_1(type="radio", checked="true", name="flexRadioDefaultName_discount", value="1")
+                label.form-check-label(for="flexRadioDefault_discount_1") Giảm giá cố định
+            .col-6
+              .form-check
+                input.form-check-input#flexRadioDefault_discount_2(type="radio", name="flexRadioDefaultName_discount", value="2")
+                label.form-check-label(for="flexRadioDefault_discount_2") Giảm giá theo phần trăm(%)
+          
+          .mb-3.discount-number.show-discount
+            label.form-label Mức tiền giảm
+            .form-input-control
+              input.form-control.form-control-root(type="text", aria-describedby="textHelp", value="0") 
+              div.text-end-input 
+                span VND
+
+          .mb-3.discount-percent
+            label.form-label Mức giảm theo phần trăm %
+            .form-input-control.mb-3
+              input.form-control.form-control-root(type="text", aria-describedby="textHelp", value="0") 
+            .discount-number.show-discount
+              label.form-label Mức tiền giảm tối đa
+              .form-input-control
+                input.form-control.form-control-root(type="text", aria-describedby="textHelp", value="0") 
+                div.text-end-input 
+                  span VND
+        
+          .d-flex.justify-content-between.align-items-center.mb-2
+            span Nhà cung cấp dịch vụ
+              span.text-danger *
+            .btn.text-main.fw-600 Xoá hết
+          .mb-3 
+            span.color-gray.font-12 Các đối tác cung cấp dịch vụ trên hệ thống cho Heyotrip
+          .mb-3(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListPartner", aria-controls="offcanvasBottom")
+            .border.border-1.rounded-3.p-2
+              overflow-x-scroll
+              .btn.btn-city VJ
+              .btn.btn-city HPL
+              .btn.btn-city TVP
+              .btn.btn-city EZC
+          
+          .d-flex.justify-content-between.align-items-center.mb-2
+            span Đối tác thanh toán
+              span.text-danger *
+            .btn.text-main.fw-600 Xoá hết
+          .mb-3 
+            span.color-gray.font-12 Các đối tác cung cấp dịch vụ trên hệ thống cho Heyotrip
+          .mb-3(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListPartnerPayment", aria-controls="offcanvasBottom")
+            .border.border-1.rounded-3.p-2
+              .btn.btn-city VCB
+              .btn.btn-city ACB
+              .btn.btn-city HSBC
+              .btn.btn-city TP Bank
+          
+          .mb-3
+            label.form-label(for="textarea-content") Nội dung tóm tắt mã khuyến mãi
+              span.text-danger *
+            textarea.form-control#textarea-content(rows="5")
+              
+          hr.my-4
+
+          h3.font-16.fw-600.mb-4 Điều kiện áp dụng đơn hàng
+
+          .mb-3
+            +select('Quốc gia đi', false )
+          .mb-3
+            +select('Quốc gia đến', false )
+          .mb-3
+            +select('Thành phố đi', false )
+          .mb-3
+            +select('Thành phố đến', false )
+          .mb-3
+            +select('Sân bay đi', false )
+          .mb-3
+            +select('Sân bay đến', false )
+          .mb-3
+            +date('Khởi hành từ:', true )
+          .mb-3
+            +date('Khởi hành đến:', true )
+        
+          .mb-3
+            label.form-label(for="cryptoInputText2") Giá trị đơn hàng tối thiểu phải đạt
+            .form-check.mb-2
+              input.form-check-input#flexRadioDefaultNoLimit(type="radio", name="flexRadioDefaultName")
+              label.form-check-label.color-gray(for="flexRadioDefaultNoLimit") Không giới hạn
+            .form-input-control
+              input.form-control.form-control-root#cryptoInputText5(type="text", aria-describedby="textHelp", value="0") 
+              div.text-end-input 
+                span VND
+          
+          .mb-3
+            label.form-label(for="cryptoInputText2") Số lượng khách tối thiểu 
+              span.text-danger *
+            input.form-control.form-control-root#cryptoInputText2(type="text", value="0")
+          
+          .mb-3
+            label.form-label(for="exampleFormControlTextarea_11") Nội dung điều kiện
+              span.text-danger *
+            textarea.form-control#exampleFormControlTextarea_11(rows="5", placeholder="Nhập nội dung")
+    
+      .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+        .row
+          .col-6
+            button.btn.w-100.btn-outline-primary.btn-h-48(data-bs-toggle="modal" data-bs-target="#modalPreview") Xem trước
+          .col-6
+            button.btn.w-100.btn-blue.btn-h-48 Tạo khuyến mãi
+
+    +promoCodeModal('Ngôn ngữ','Nhập ngôn ngữ cần tìm', 'offcanvasLanguage')
+    +promoCodeModal('Tiện nghi chung chỗ nghỉ','Nhập Ngôn ngữ cần tìm', 'offcanvasFacility')
+    +promoCodeModal('Tiện nghi phòng','Nhập tiện nghi phòng cần tìm', 'offcanvasFacilityRoom')
+    +promoCodeModal('Tiện nghi phòng tắm','Nhập tiện nghi cần tìm', 'offcanvasFacilityBedRoom')
+
+    include includes/promo/preview.pug
+    include includes/promo/modal-partner-payment.pug
+    include includes/modal-notify.pug
+    include includes/js.pug
+    
+    

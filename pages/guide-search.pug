@@ -4,14 +4,14 @@ include includes/style.pug
 doctype html
 html(lang="en")
   
-  +docType("Topic list | HYO")
+  +docType("Tìm kiếm bài viết | HYO")
 
   body
     section.main
-      +headers('Danh sách chủ đề', '(37 chủ đề)')
+      +headers('Hướng dẫn và mẹo du lịch', '(37 chủ đề)')
 
       include includes/search-title.pug
-      include includes/guide/list.pug
+      include includes/guide/list-guide.pug
       include includes/add.pug
 
     include includes/crypto/modal-confirm-active.pug

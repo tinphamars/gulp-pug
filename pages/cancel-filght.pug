@@ -1,0 +1,152 @@
+include includes/header.pug
+include includes/style.pug
+include includes/country/modal-search.pug
+include form\form.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Modal cancel | HYO")
+
+  body
+    section.main
+      +headers('Flight - Modal cancel', '')
+
+      ul.list-group.list-group-flush
+        li.list-group-item 
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#modalCancelFlight") Hủy chuyến bay
+        li.list-group-item 
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#modalCancelIn") Hủy chuyến bay nội bộ
+        li.list-group-item 
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#modalCancelOut") Hủy chuyến bay trực tiếp
+        li.list-group-item 
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#modalCancelInSuccess") Hủy chuyến bay thành công !
+        li.list-group-item 
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#modalCancelInSuccessOut") Hủy chuyến bay thành công trực tiếp
+        li.list-group-item 
+          button.btn.btn-outline-warning(data-bs-toggle="modal" data-bs-target="#modalCancelInFail") Hủy chuyến bay thất bại !
+      
+    .modal.fade#modalCancelFlight(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog.modal-dialog-centered.modal-sm-custom
+        .modal-content
+          .modal-body.color-bl(style="padding: 16px")
+            img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
+            .text-center.mb-3
+              span.text-danger.fw-600.font-18 Hủy chuyến bay
+            .mb-2
+              span 
+                span.fw-600 Hủy trực tiếp: 
+                |  Hệ thống tiến hành gọi API qua hãng để hủy chuyến bay.
+            .mb-2
+              span 
+                span.fw-600 Hủy nội bộ: 
+                | Áp dụng trong trường hợp đã hủy chuyến bay trực tiếp trên trang đối tác. Tính năng góp phần đồng bộ dữ liệu trạng thái trên hệ thống.
+            .d-flex.justify-content-between.mt-4.fw-600
+              button.btn.btn-red-outline.btn-confirm-crypto Hủy trực tiếp
+              button.btn.btn-red-outline.btn-confirm-crypto Hủy nội bộ
+
+    .modal.fade#modalCancelIn(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog.modal-dialog-centered.modal-sm-custom
+        .modal-content
+          .modal-body.color-bl(style="padding: 16px")
+            img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
+            .text-center.mb-3
+              span.text-danger.fw-600.font-18 Hủy chuyến bay
+            .text-center.mb-3
+              span.fw-600.font-16 Bạn có chắc muốn huỷ chuyến bay này không?
+            .mb-2
+              span 
+                span.fw-600 *Lưu ý:&nbsp;
+                | Bạn cần thực hiện thao tác huỷ chuyến bay trực tiếp trên trang đối tác trước khi xác nhận huỷ chuyến bay tại đây.ợp đã hủy chuyến bay trực tiếp trên trang đối tác. Tính năng góp phần đồng bộ dữ liệu trạng thái trên hệ thống.
+            .mb-2 
+              img(src="assets/img/exclamation-v2.png", alt="")
+              span &nbsp;Lệ phí hủy&nbsp;
+                span.text-danger &nbsp;*
+            .mb-2
+              +dropdownInput('Nhập số tiền hủy chuyến bay')
+
+            .d-flex.justify-content-between.mt-4.fw-600
+              button.btn.btn-outline-secondary.btn-confirm-crypto Đóng
+              button.btn.btn-danger.btn-confirm-crypto Hủy chuyến bay
+    
+    .modal.fade#modalCancelOut(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog.modal-dialog-centered.modal-sm-custom
+        .modal-content
+          .modal-body.color-bl(style="padding: 16px")
+            img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
+            .text-center.mb-3
+              span.text-danger.fw-600.font-18 Hủy chuyến bay trực tiếp
+            .text-center.mb-3
+              span Bạn đang thực hiện hủy chuyến bay
+            .text-center.mb-3
+              span.fw-600 Hà Nội (HAN) - Hồ Chí Minh (SGN) 
+                <br>
+                | 19h30 24/12/2022.
+
+            .mb-2
+              span 
+                span.fw-600 *Lưu ý:&nbsp;
+                |  Hệ thống sẽ tiến hành gọi API qua hãng Vietnam Airlines để hủy chuyến bay cho khách hàng. Vui lòng nhập lệ phí và xác nhận hủy chuyến bay.
+            .mb-2.position-relative
+              .cancel-tooltip.w-40.bd-gray.p-1.d-none
+                span.font-12 CS trao đổi với khách hàng để nhập lệ phí hủy chuyến bay thích hợp
+              img.note-tooltip(src="assets/img/exclamation-v2.png", alt="")
+              span &nbsp;Lệ phí hủy&nbsp;
+                span.text-danger &nbsp;*
+            .mb-2
+              +dropdownInput('Nhập số tiền hủy chuyến bay')
+
+            .d-flex.justify-content-between.mt-4.fw-600
+              button.btn.btn-outline-secondary.btn-confirm-crypto(data-bs-dismiss="modal" aria-label="Close") Đóng
+              button.btn.btn-danger.btn-confirm-crypto Hủy chuyến bay
+
+    .modal.fade#modalCancelInSuccess(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog.modal-dialog-centered.modal-sm-custom
+        .modal-content
+          .modal-body.color-bl(style="padding: 16px")
+            img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
+            .mt-3.text-center 
+              .mb-1 
+                img(src="assets/img/cancel-success.png", alt="")
+              .mb-3  
+                span.text-complete.fw-600.font-18 Hủy chuyến bay thành công !
+              .mb-3  
+                span.color-gray Bạn vừa thực hiện cập nhật trạng thái huỷ chuyến bay 
+              .d-block 
+                span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN) | 19h30 24/12/2022
+    
+    .modal.fade#modalCancelInSuccessOut(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog.modal-dialog-centered.modal-sm-custom
+        .modal-content
+          .modal-body.color-bl(style="padding: 16px")
+            img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
+            .mt-3.text-center 
+              .mb-1 
+                img(src="assets/img/cancel-success.png", alt="")
+              .mb-3  
+                span.text-complete.fw-600.font-18 Hủy chuyến bay thành công !
+              .mb-3  
+                span Bạn vừa huỷ thành công chuyến bay
+              .d-block 
+                span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN) 19h30 24/12/2022.
+
+    .modal.fade#modalCancelInFail(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog.modal-dialog-centered.modal-sm-custom
+        .modal-content
+          .modal-body.color-bl(style="padding: 16px")
+            img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
+            .mt-3.text-center 
+              .mb-1 
+                img(src="assets/img/cancel-fail.png", alt="")
+              .mb-3  
+                span.text-danger.fw-600.font-18 Hủy chuyến bay thất bại !
+              .mb-3  
+                span Bạn vừa huỷ thành công chuyến bay
+              .mb-3
+                span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN)
+                  <br>
+                  | 19h30 24/12/2022.
+              .d-block   
+                span Bạn vừa huỷ thành công chuyến bay
+    include includes/js.pug
+

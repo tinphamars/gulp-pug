@@ -18,6 +18,46 @@ mixin textCount(label, required, placeholder)
   .text-end.mt-1 
       span.color-gray 0/100
 
+mixin phone(label, required)
+  label.form-label=label
+    if required
+      span.text-danger  *
+  .input-group
+    button.btn.btn-outline-secondary.dropdwon-input-custom.dropdown-toggle(type="button", data-bs-toggle="dropdown", aria-expanded="false") +84
+    ul.dropdown-menu
+      li
+        a.dropdown-item(href="#") +1
+      li
+        a.dropdown-item(href="#") +2
+      li
+        a.dropdown-item(href="#") +3
+    input.form-control.form-control-root(type="text", aria-label="Text input with dropdown button")
+
+mixin textHasSubLabel(label, required, placeholder, textSub)
+  label.form-label=label
+    if required
+      span.text-danger  *
+  .mb-2
+    span.font-12.color-gray=textSub
+  input.form-control.form-control-root(type="text", placeholder=placeholder)
+
+mixin start(label, required)
+  label.form-label=label
+    if required
+      span.text-danger  *
+  .list-start
+    span.fa.fa-2x.fa-star.checked
+    span.fa.fa-2x.fa-star.checked
+    span.fa.fa-2x.fa-star.checked
+    span.fa.fa-2x.fa-star.checked
+    span.fa.fa-2x.fa-star
+
+mixin timeWithHour(label, required)
+  label.form-label(for="cryptoInputText2")=label
+      if required
+        span.text-danger  *
+  input.form-control.form-control-root#cryptoInputText2(type="time")
+  
 mixin date(label, required)
   label.form-label(for="cryptoInputText2")=label
     if required
@@ -31,7 +71,7 @@ mixin select(label, required)
   select.form-select.form-control-root(aria-label="Default select example")
     option(selected) Tất cả
     option(value="1") Select name 2
-
+    option(value="2") Select name 3
 mixin radio(label)
   .form-check
     input.form-check-input#flexRadioDefault_route_2(type="radio", name="flexRadioDefaultName_route")
@@ -84,3 +124,101 @@ mixin textareaEditor(label, required)
   if required
     span.text-danger  *
   textarea.textarea-editor
+
+mixin dropdownInput(placeholder)
+  .input-group
+    input.form-control.form-control-root(type="text", placeholder=placeholder)
+    button.btn.btn-outline-secondary.dropdwon-input-custom.dropdown-toggle.fw-600(type="button", data-bs-toggle="dropdown", aria-expanded="false") USD
+    ul.dropdown-menu.dropdown-menu-end.custom-pkt-dropdown.color-gray 
+      li.d-flex.align-items-center.justify-content-between.p-2.choose-dropdown-ptk
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon VND
+          span Vietnamese Dong
+        img(src="assets/img/cancle-fligt-check.png", alt="cancel flight")
+      
+      li.d-flex.align-items-center.justify-content-between.p-2
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon USD 
+          span US Dollar
+
+      li.d-flex.align-items-center.justify-content-between.p-2
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon PHP
+          span Philippine Peso
+
+      li.d-flex.align-items-center.justify-content-between.p-2
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon EUR 
+          span Euro
+      
+      li.d-flex.align-items-center.justify-content-between.p-2
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon JPY
+          span Japanese Yen
+      
+      li.d-flex.align-items-center.justify-content-between.p-2
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon KRW
+          span Korea Won
+
+      li.d-flex.align-items-center.justify-content-between.p-2
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon IDR 
+          span Indonesian Rupiad
+      
+      li.d-flex.align-items-center.justify-content-between.p-2
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon MYR 
+          span Malaysian Ringgit
+      
+      li.d-flex.align-items-center.justify-content-between.p-2
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon CNY
+          span Chinese Yuan
+      
+      li.d-flex.align-items-center.justify-content-between.p-2
+        .d-flex.padding-r-15.align-items-center
+          span.text-uppercase.padding-r-10.w-currency-dropdwon AUD 
+          span Australian Dollar
+
+mixin inputTextEnd(label, required, placeholder, textEnd, disabled)
+  label.form-label=label
+    |&nbsp;
+  if required
+    span.text-danger *
+  .form-input-control
+    if disabled
+      input.form-control.form-control-root#cryptoInputText3(type="text", disabled aria-describedby="textHelp" placeholder=placeholder) 
+    else
+      input.form-control.form-control-root#cryptoInputText3(type="text", aria-describedby="textHelp" placeholder=placeholder)
+    div.text-end-input 
+      span=textEnd
+  
+mixin inputTextHasIconCp(label, required, placeholder, disabled)
+  label.form-label=labeb 
+    |&nbsp;
+    if required
+      span.text-danger *
+  .form-input-control
+    if disabled
+      input.form-control.form-control-root.max-content#cryptoInputText3(type="text", aria-describedby="textHelp", placeholder="7WBvQTiRcqAuybLZutmxTz8u24S")
+    else 
+      input.form-control.form-control-root.max-content#cryptoInputText3(type="text", disabled, aria-describedby="textHelp", placeholder="7WBvQTiRcqAuybLZutmxTz8u24S")
+    .img-end-input
+      img(src="assets/img/copi-icon.png", alt)
+
+mixin selectNotLabel()
+  select.form-select.form-control-root(aria-label="Default select example")
+    option(selected) Tất cả
+    option(value="1") Select name 2
+    option(value="2") Select name 3
+
+mixin select2Label(label1, label2)
+  .d-flex.justify-content-between.align-items-center
+    label.form-label=label1
+    span.color-gray.font-12=label
+
+  select.form-select.form-control-root(aria-label="Default select example")
+    option(selected) Tất cả
+    option(value="1") Select name 2
+    option(value="2") Select name 3

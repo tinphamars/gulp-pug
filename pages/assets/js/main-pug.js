@@ -30,7 +30,9 @@ textareaForm &&
 // modal when change active field
 var cryptoActive = document.getElementsByClassName("crypto-active");
 var confirmModalElement = document.getElementById("modalConfirmActiveCrypto");
-var modalConfirmUnActiveCrypto = document.getElementById("modalConfirmUnActiveCrypto");
+var modalConfirmUnActiveCrypto = document.getElementById(
+  "modalConfirmUnActiveCrypto"
+);
 if (confirmModalElement) {
   var confirmModal = new bootstrap.Modal(confirmModalElement, {
     keyboard: false,
@@ -48,7 +50,7 @@ if (cryptoActive.length > 0) {
     element.addEventListener("change", (e) => {
       if (!e.target.checked) {
         confirmModal && confirmModal.show();
-      }else {
+      } else {
         confirmModalUn && confirmModalUn.show();
       }
     });
@@ -85,12 +87,39 @@ if (showCryptoInSurchargeFeature && showCryptoInSurchargeForm) {
   });
 }
 
+// show hide tooltip
+var modalCancelOut = document.getElementById("modalCancelOut");
+if (modalCancelOut) {
+  modalCancelOut.addEventListener("show.bs.modal", function () {
+    var tooltipIcon = document.getElementsByClassName('note-tooltip')
+    var cancelTooltip = document.getElementsByClassName('cancel-tooltip')
+    if (tooltipIcon.length > 0) {
+      Array.from(tooltipIcon).forEach(function (element) {
+        element.addEventListener("click", (e) => {
+          if (cancelTooltip[0].classList.contains('d-none')) {
+            cancelTooltip[0].classList.remove('d-none')
+          } else {
+            cancelTooltip[0].classList.add('d-none')
+          }
+        });
+      });
+    }
+  });
+}
+
 // tinyEditor
 tinymce.init({
   selector: ".textarea-editor",
   plugins: ["autoresize"],
   width: "100%",
-  height: "50vh",
+  menubar: false,
+  plugins: "link image code",
+  toolbar_mode: "wrap",
+  mobile: {
+    toolbar_mode: 'wrap'
+  },
+  toolbar:
+    "undo redo | forecolor backcolor | styles | formatting | align | fontsize | bold italic | numlist bullist | blockquote | link | image | table | code | remove",
 });
 
 var offcanvasExample = document.getElementById("offcanvasAllowNotify");

@@ -4,15 +4,15 @@ include includes/style.pug
 doctype html
 html(lang="en")
   
-  +docType("Flight Promo code search list")
+  +docType("Flight - tìm kiếm khuyến mãi | HYO")
 
   body
     section.main
-      +headers("Chương trình khuyến mãi", "")
+      +headers("Chương trình khuyến mãi", "05 mã khuyến mãi")
 
       include includes/search-title.pug
 
-      include includes/promo/list.pug
+      include includes/promo/list-flight.pug
       include includes/add.pug
 
     include includes/crypto/modal-confirm-active.pug
@@ -24,9 +24,10 @@ html(lang="en")
           li.list-group-item.text-center.p-3 Chỉnh sửa
           li.list-group-item.text-center.p-3 Xem
           li.list-group-item.text-center.p-3 Tạo bản sao
-          li.list-group-item.text-center.p-3 xoá
+          li.list-group-item.text-center.p-3 Xoá
 
     include includes/promo/modal-search.pug
+    +promoSearch(true)
     include includes/js.pug
 
 

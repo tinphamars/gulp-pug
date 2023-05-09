@@ -4,15 +4,16 @@ include includes/style.pug
 doctype html
 html(lang="en")
   
-  +docType("Popular outside | HYO")
+  +docType("Quốc gia nổi tiếng | HYO")
 
   body
     section.main
       +headers('Quốc gia nổi tiếng', '(11 bài viết)')
-      include includes/guide/list.pug
+      include includes/guide/list-outside.pug
       include includes/add.pug
 
     include includes/crypto/modal-confirm-active.pug
     include includes/popular/search.pug
+    +modalInOut(true)
     include includes/js.pug
 

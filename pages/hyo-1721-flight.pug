@@ -1,0 +1,48 @@
+include includes/header-detail.pug
+include includes/style.pug
+include form/form.pug
+
+doctype html
+html(lang="en")
+
+  +docType("Flight - Hoàn tiền Stripe | HYO")
+
+  body
+    section.main
+      +headerDetail('Flight - Hoàn tiền Stripe')
+
+      .w-with-padding.mt-3.color-bl
+        .mb-3   
+          span Bạn đang tiến hành hoàn tiền cho chuyến bay
+          <br>
+          span.fw-600 Hà Nội (HAN) - Hồ Chí Minh (SGN) | 19h30 24/12/2022.
+
+        form(action="") 
+          .mb-3
+            +textDisable('Mã giao dịch', false, "ch_2cfgf1y12gyuyguygu824")
+          .mb-3
+            +inputTextEnd('Số tiền hoàn trả', true, 'Nhập số tiền...', 'USD')
+          .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+            button.btn.w-100.btn-blue.btn-h-48(data-bs-toggle="modal" data-bs-target="#refundModal_STRIP_CONFIRM" type="button") Tiếp theo &nbsp;
+              img(src="assets/img/to-right.png", alt="")
+
+    .modal.fade#refundModal_STRIP_CONFIRM(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog.modal-dialog-centered.modal-sm-custom
+        .modal-content
+          .modal-body.color-bl(style="padding: 16px")
+            img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
+            .text-center.mb-3
+              img.padding-r-10(src="assets/img/refund-svg.png", alt="")
+              span.color-bl.fw-600.font-18 Xác nhận hoàn tiền
+            .mb-3
+              span Bạn vui lòng kiểm tra các trường thông tin nhập liệu. Hãy chắc chắn rằng thông tin đã chính xác trước khi xác nhận hoàn tiền cho khách hàng.
+            .mb-3
+              +textDisable('Mã giao dịch', false, "ch_2cfgf1y12gyuyguygu824")
+            .mb-3
+              +inputTextEnd('Số tiền hoàn trả', true, 100, 'USD', true)
+
+            .d-flex.justify-content-between.mt-4.fw-600
+              button.btn.btn-outline-secondary.btn-confirm-crypto Quay lại
+              button.btn.btn-danger.btn-confirm-crypto Xác nhận
+
+    include includes/js.pug

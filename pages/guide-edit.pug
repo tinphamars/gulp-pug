@@ -5,11 +5,11 @@ include includes/style.pug
 doctype html
 html(lang="en")
   
-  +docType("Guide edit")
+  +docType("Chỉnh sửa bài viết | HYO")
 
   body
     section.main
-      +headerDetail('Thêm bài viết mới')
+      +headerDetail('Chỉnh sửa bài viết')
       
       .w-with-padding.mt-3.color-bl.mb-sub-button
         form(action="") 
@@ -23,10 +23,7 @@ html(lang="en")
             +select('Quốc gia', true)      
 
           .mb-3
-            +select('Tỉnh/Thành Phố', true)     
-          
-          .mb-3
-            +img('Hình ảnh Banner', true, 'Dimension (1242 x 464) Max 500KB')   
+            +img('Hình ảnh banner', true, 'Dimension (1242 x 464) Max 500KB')   
 
           .mb-3 
             img(src="assets/img/promo-detail.png", alt="alt")
@@ -41,7 +38,7 @@ html(lang="en")
             +text('Tiêu đề bài viết', true, 'Nhập tiêu bài viết')
           
           .mb-3
-            +textarea('Nội dung bài viết', 6, true, false, '')
+            +textFocus('Nội dung bài viết', false, 'Nhập nội dung bài viết')
     
       .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
         .row

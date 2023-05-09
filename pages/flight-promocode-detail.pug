@@ -4,7 +4,7 @@ include includes/style.pug
 doctype html
 html(lang="en")
 
-  +docType("Flight promo code detail page")
+  +docType("Flight - chi tiết khuyến mãi | HYO")
 
   body
     section.main
@@ -25,11 +25,17 @@ html(lang="en")
           span Loại khuyến mãi:
           span.color-bl.fw-600 Promo code
         .d-flex.justify-content-between.align-items-center.mb-3
+          span Mã khuyến mãi:
+          span.color-bl.fw-600 FLIGHTHUU
+        .d-flex.justify-content-between.align-items-center.mb-3
           span Mã chương trình:
           span.color-bl.fw-600 08032022-H-VNSUMVAY
         .d-flex.justify-content-between.align-items-center.mb-3
           span Trạng thái:
           span.fw-600.color-refurn Inactive
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Tên chương trình khuyến mãi:
+          span.color-bl.fw-600 FLIGHTHUU
         span.d-block.mb-2 Nội dung khuyến mãi: 
         .border.border-1.rounded.p-3.mb-3
           span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
@@ -40,10 +46,17 @@ html(lang="en")
         span.d-block.mb-2.color-bl Hình ảnh logo
         div
           img(src="/assets/img/promo-detail-logo.png", width="108" alt="promo detail")   
-
         hr.my-4
       
+        
         h2.font-16.fw-600.mb-3.color-bl Thiết lập mã khuyến mãi
+
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Tự động apply:
+          span.color-bl.fw-600 Có
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Kiểu hiển thị trên ứng dụng:
+          span.color-bl.fw-600.text-end Hiển thị trong danh sách
         .d-flex.justify-content-between.align-items-center.mb-3
           span Đường dẫn hiển thị:
           span.color-bl.fw-600 https://admin.com
@@ -64,8 +77,11 @@ html(lang="en")
           span.color-bl.fw-600 0
         .d-flex.justify-content-between.align-items-center.mb-3
           span Mức giảm tối đa
-          span.color-bl.fw-600 0 VND
-        span.d-block.mb-2 Nội dung khuyến mãi: 
+          span.color-bl.fw-600 100 VND
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span.w-50 Nhà cung cấp dịch vụ:
+          span.color-bl.fw-600.text-end Tất cả nhà cung cấp trên hệ thống Heyotrip
+        span.d-block.mb-2 Nội dung tóm tắt khuyến mãi:
         .border.border-1.rounded.p-3.mb-3
           span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
         
@@ -74,50 +90,46 @@ html(lang="en")
           div 
             .btn.btn-city.font-12 VCB
             .btn.btn-city.font-12 ACB
-            .btn.btn-city.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListPartnerPayment", aria-controls="offcanvasBottom") +10
-
+            .btn.btn-city-outline.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListPartnerPayment", aria-controls="offcanvasBottom") +10 
+              img.p-1(src="assets/img/more.png", alt="")
         hr.my-4
 
         h2.font-16.fw-600.mb-3.color-bl Điều kiện áp dụng đơn hàng
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Quốc gia du lịch:
-          span.color-bl.fw-600 Việt Nam
+          span Quốc gia đi - đến:
+          span.color-bl.fw-600 Việt Nam - Việt Nam
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Thành phố:
-          div 
-            .btn.btn-city.font-12 Hồ Chí Minh
-            .btn.btn-city.font-12 Hà Nội
-            .btn.btn-city.font-12(data-bs-toggle="offcanvas", data-bs-target="#offcanvasListCity", aria-controls="offcanvasBottom") +10
+          span Thành phố đi - đến:
+          span.color-bl.fw-600 Hà Nội - Hồ Chí Minh
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Ngày bắt đầu:
-          span.color-bl.fw-600 20/05/2022 - 02:00 AM
+          span Sân bay đi - đến:
+          span.color-bl.fw-600 Nội Bài - Tân Sân Nhất
+
+
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Ngày kết thúc:
-          span.color-bl.fw-600 20/05/2022 - 02:00 PM
+          span Ngày khởi hành từ:
+          span.color-bl.fw-600 06/12/2022 - 10:00 AM
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Ngày khởi hành đến:
+          span.color-bl.fw-600 07/12/2022 - 10:00 AM
         .d-flex.justify-content-between.align-items-center.mb-3
           span Số lượng phát hành:
-          span.color-bl.fw-600 500.000.000
+          span.color-bl.fw-600 100
+
+
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Giới hạn sử dụng trong ngày
-          span.color-bl.fw-600 2.000
+          span.w-50 Giá trị đơn hàng tối thiểu phải đạt:
+          span.color-bl.fw-600 2,000,000 VND
         .d-flex.justify-content-between.align-items-center.mb-3
-          span Mức giảm giá theo %
-          span.color-bl.fw-600 0
-        .d-flex.justify-content-between.align-items-center.mb-3
-          span Mức giảm tối đa
-          span.color-bl.fw-600 0 VND
+          span Số lượng khách tối thiểu:
+          span.color-bl.fw-600 12
+
         span.d-block.mb-2 Nội dung khuyến mãi: 
         .border.border-1.rounded.p-3.mb-3
           span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
 
       .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
-        .row
-          .col-6
-            a(href="#")
-              button.btn.w-100.btn-blue.btn-h-48 Chỉnh sửa
-          .col-6
-            a(href="#")
-              button.btn.w-100.btn-outline-secondary.btn-h-48 Đóng
+        button.btn.w-100.btn-blue.btn-h-48 Chỉnh sửa
 
     .offcanvas.offcanvas-bottom.offcanvas-with-radius#offcanvasListCity(style="z-index: 1111;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
       .offcanvas-body.small

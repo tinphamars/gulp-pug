@@ -1,0 +1,41 @@
+mixin hotelItem(hotelName, activeTitle)
+  .card-crypto.mb-3.bg-gray.border.p-3.bd-5px
+    .d-flex.justify-content-between.align-items-center.mb-4
+      .mb-2
+        a.font-16.text-main.fw-600.text-decoration-none(href="#")=hotelName
+        .list-start
+          span.fa.fa-star.checked
+          span.fa.fa-star.checked
+          span.fa.fa-star.checked
+          span.fa.fa-star.checked
+          span.fa.fa-star
+      .form-check.form-switch.padding-r-15
+        input.form-check-input.form-check-custom.crypto-active(type="checkbox" role="switch")
+
+    a.d-block.text-decoration-none.mb-3(href="#")
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Loại chỗ nghỉ:
+        span.text-black.fw-600 Căn hộ
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Quốc gia:
+        span.text-black.fw-600 Việt Nam
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Địa chỉ:
+        span.text-black.fw-600 Bãi Bắc Sơn Trà,  Đà Nẵng
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Giá phòng thấp nhất:
+        span.text-black.fw-600 1,500,000 VNĐ
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Ngày cập nhật:
+        span.text-black.fw-600 20/05/2022 - 20:00 PM
+      .d-flex.justify-content-between.align-items-center.color-gray.mb-2
+        span.fw-500 Người cập nhật
+        span.text-black.fw-600 Lâm Chí Khang
+
+  
+    .text-end 
+      a.text-main.fw-600.text-decoration-none(href="#")
+        .d-flex.align-items-center.justify-content-end
+          img.padding-r-15(src="assets/img/icon-edit.png")
+          span Chỉnh sửa
+      

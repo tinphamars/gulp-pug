@@ -1,0 +1,42 @@
+include includes/header-detail.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Chi tiết bài viết | HYO")
+  
+  body
+    section.main
+      +headerDetail('Chi tiết bài viết')
+      
+      .w-with-padding.mb-sub-button.mt-3
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Chủ đề:
+          span.color-bl.fw-600 Chủ đề QGNT Hàn Quốc
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span Ngôn ngữ:
+          span.color-bl.fw-600 Tiếng Việt
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span.w-60 Quốc gia:
+          span.color-bl.fw-600 Việt Nam
+        .d-flex.justify-content-between.align-items-center.mb-3
+          span.w-60 Trạng thái:
+          span.fw-600.notify-color-orange Inactive
+      
+        span.d-block.mb-2 Hình ảnh banner:
+        div.mb-3
+          img.rounded-1(src="assets/img/promo-detail.png", width="240" alt="promo detail")   
+        span.d-block.mb-2 Hình ảnh cover:
+        div.mb-3
+          img(src="assets/img/promo-detail-logo.png", width="108" alt="promo detail")   
+
+        span.d-block.mb-2 Nội dung bài viết:
+        .d-block.color-bl
+          span Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi temporibus iusto incidunt similique error consequatur, doloremque, beatae reiciendis non quisquam, inventore libero. Obcaecati molestiae in architecto error recusandae? Quaerat.
+      
+      .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+        a(href="#")
+          button.btn.w-100.btn-blue.btn-h-48 Chỉnh sửa  
+
+    include includes/js.pug

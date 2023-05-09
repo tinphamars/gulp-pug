@@ -4,12 +4,12 @@ include includes/style.pug
 doctype html
 html(lang="en")
 
-  +docType("Promo code list")
+  +docType("Fight - chương trình khuyến mãi | HYO")
 
   body
     section.main
       +headers("Chương trình khuyến mãi", "05 mã khuyến mãi")
-      include includes/promo/list.pug
+      include includes/promo/list-flight.pug
       include includes/add.pug
     include includes/crypto/modal-confirm-active.pug
     .offcanvas.offcanvas-bottom.offcanvas-with-radius#offcanvasBottomEdit(style="z-index: 1111; height: auto;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
@@ -20,9 +20,10 @@ html(lang="en")
           li.list-group-item.text-center.p-3 Chỉnh sửa
           li.list-group-item.text-center.p-3 Xem
           li.list-group-item.text-center.p-3 Tạo bản sao
-          li.list-group-item.text-center.p-3 xoá
+          li.list-group-item.text-center.p-3 Xoá
 
     include includes/promo/modal-search.pug
+    +promoSearch(true)
     include includes/js.pug
 
 

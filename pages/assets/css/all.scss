@@ -497,7 +497,7 @@ body {
 .btn-city-outline {
   padding: 4px 10px;
   border: 1px solid #0770cd;
-  color: #0770CD;
+  color: #0770cd;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -512,7 +512,7 @@ body {
 
 .form-select {
   background-color: #fff;
-  background-image: url('../img/dropdown-icon.png');
+  background-image: url("../img/dropdown-icon.png");
   background-repeat: no-repeat;
   background-position: right 0.35rem center;
   background-size: 30px 22px;
@@ -1004,3 +1004,100 @@ body {
 .mb-60 {
   margin-bottom: 60px;
 }
+
+.btn-red-outline {
+  color: #dc3545;
+  background: #f7e9ed;
+  border: 1px solid #dc3545;
+}
+.cancel-tooltip {
+  position: absolute;
+  bottom: 35px;
+  background: #e1e1e1;
+}
+
+.cancel-tooltip::before {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #e1e1e1;
+}
+
+.img-end-input {
+  position: absolute;
+  font-weight: 600;
+  right: 0;
+  top: 8px;
+  padding-top: 5px;
+  height: 30px;
+  width: 42px;
+  background: transparent;
+  text-align: center;
+}
+
+.warning-transit {
+  padding: 10px;
+  background: #fcf8e3;
+  border: 1px solid #f3ba2f;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.warning-transit span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #333333;
+}
+
+.warning-transit img {
+  padding-right: 5px;
+}
+.list-start span.checked {
+  color: #f3ba2f;
+}
+
+.list-start span.checked {
+  color: #f3ba2f;
+}
+
+.list-start span.fa-2x {
+  margin-right: 10px;
+}
+.w-333 {
+  width: 33.33333%;
+}
+.hotel-add-tabs {
+  border: none;
+  background: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 3px solid transparent;
+}
+.hotel-add-tabs.active {
+  color: #0770cd;
+  border-bottom: 3px solid #0770cd;
+}
+.nav-tabs.remove-line-button {
+  border-bottom: none;
+} 
+.btn-marker {
+  padding: 9px 15px;
+  background: #0770cd;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+}
+.lat-log-input {
+  height: 46px;
+  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+  padding: 0 5px 0 10px;
+}
+
+

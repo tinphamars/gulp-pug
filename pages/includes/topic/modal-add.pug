@@ -1,0 +1,17 @@
+include ../../form/form.pug
+
+.modal.fade#modalTopicAdd(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered.modal-sm-custom
+    .modal-content
+      .modal-body(style="padding: 35px 16px") 
+        img.img-close-modal(src="assets/img/cancle.png", data-bs-dismiss="modal" aria-label="Close")
+        .text-center.mb-3
+          h3.fw-600.font-16.color-bl Thêm chủ đề
+
+        form(action="" method="method")  
+          .mb-3
+            +select("Danh mục bài viết", true)
+          .mb-3
+            +text('Tên chủ đề', true, 'Nhập tên chủ đề')
+
+          button.btn.w-100.btn-blue.btn-h-48 Lưu

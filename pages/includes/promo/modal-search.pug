@@ -1,66 +1,74 @@
-.modal.fade#modal-search(tabindex="-1", aria-labelledby="exampleModalLabel", aria-modal="true", role="dialog")
-  .modal-dialog.modal-fullscreen
-    .modal-content.modal-search
-      .modal-search-header.d-flex.justify-content-between.align-items-center
-        img(src="assets/img/back.png", data-bs-dismiss="modal", aria-label="Close")
-        .center Tìm kiếm
-        .right Xóa bộ lọc
-      .modal-body
-        form
-          .mb-4
-            label.form-label(for="exampleInputEmail1") Mã chương trình
-            .input-has-remove
-              input.form-control.form-control-root(type="text", placeholder="Mã chương trình")
-          .mb-4
-            label.form-label(for="exampleInputEmail1") Mã khuyến mãi
-            input.form-control.form-control-root(type="text", placeholder="Mã khuyến mãi")
-          .mb-4
-            label.form-label(for="exampleInputEmail1") Loại khuyến mãi
-            .form-select-control
-              select.form-select.form-control-root
-                option(selected) Tất cả
-                option(value="1") Đã thanh toán
-                option(value="2") Chưa thanh toán
-                option(value="3") Thanh toán thất bại
-                option(value="4") Hết hạn thanh toán
-                option(value="5") Đang hoàn hủy
-                option(value="6") Đã hoàn tiền
+include ../../form/form.pug
+mixin promoSearch(flight)
+  .modal.fade#modal-search(tabindex="-1", aria-labelledby="exampleModalLabel", aria-modal="true", role="dialog")
+    .modal-dialog.modal-fullscreen
+      .modal-content.modal-search
+        .modal-search-header.d-flex.justify-content-between.align-items-center
+          img(src="assets/img/back.png", data-bs-dismiss="modal", aria-label="Close")
+          .center Tìm kiếm
+          .right Xóa bộ lọc
+        .modal-body
+          form
+            .mb-3
+              label.form-label(for="exampleInputEmail1") Mã chương trình
+              .input-has-remove
+                input.form-control.form-control-root(type="text", placeholder="Mã chương trình")
+            .mb-3
+              label.form-label(for="exampleInputEmail1") Mã khuyến mãi
+              input.form-control.form-control-root(type="text", placeholder="Mã khuyến mãi")
+            .mb-3
+              label.form-label(for="exampleInputEmail1") Loại khuyến mãi
+              .form-select-control
+                select.form-select.form-control-root
+                  option(selected) Tất cả
+                  option(value="1") Đã thanh toán
+                  option(value="2") Chưa thanh toán
+                  option(value="3") Thanh toán thất bại
+                  option(value="4") Hết hạn thanh toán
+                  option(value="5") Đang hoàn hủy
+                  option(value="6") Đã hoàn tiền
 
-          .mb-4
-            label.form-label(for="exampleInputEmail1") Trạng thái
-            .form-select-control
-              select.form-select.form-control-root
-                option(selected) Tất cả
-                option(value="1") Đã thanh toán
-                option(value="2") Chưa thanh toán
+            .mb-3
+              label.form-label(for="exampleInputEmail1") Trạng thái
+              .form-select-control
+                select.form-select.form-control-root
+                  option(selected) Tất cả
+                  option(value="1") Đã thanh toán
+                  option(value="2") Chưa thanh toán
+            if(flight)
+              .mb-3
+                +select('Quốc gia đi', false)
+              .mb-3
+                +select('Quốc gia đến', false)
 
-          .mb-4
-            label.form-label(for="exampleInputEmail1") Quốc gia
-            .form-select-control
-              select.form-select.form-control-root
-                option(selected) Tất cả
-                option(value="1") Đã thanh toán
-                option(value="2") Chưa thanh toán          
+            if(!flight)
+              .mb-3
+                label.form-label(for="exampleInputEmail1") Quốc gia
+                .form-select-control
+                  select.form-select.form-control-root
+                    option(selected) Tất cả
+                    option(value="1") Đã thanh toán
+                    option(value="2") Chưa thanh toán          
 
-          label.form-label(for="exampleInputEmail1") Ngày bắt đầu
-          .mb-4.border.border-1.rounded-3.p-3
-            .mb-4
-              label.form-label(for="cryptoInputText2") Ngày bắt đầu từ
-              input.form-control.form-control-root#cryptoInputText2(type="date")      
-            .d-block
-              label.form-label(for="cryptoInputText2") Ngày bắt đầu đến
-              input.form-control.form-control-root#cryptoInputText2(type="date")  
+            label.form-label(for="exampleInputEmail1") Ngày bắt đầu
+            .mb-3.border.border-1.rounded-3.p-3
+              .mb-3
+                label.form-label(for="cryptoInputText2") Ngày bắt đầu từ
+                input.form-control.form-control-root#cryptoInputText2(type="date")      
+              .d-block
+                label.form-label(for="cryptoInputText2") Ngày bắt đầu đến
+                input.form-control.form-control-root#cryptoInputText2(type="date")  
 
-          label.form-label(for="exampleInputEmail1") Ngày kết thúc
-          .mb-4.border.border-1.rounded-3.p-3
-            .mb-4
-              label.form-label(for="cryptoInputText2") Ngày kết thúc từ
-              input.form-control.form-control-root#cryptoInputText2(type="date")      
-            .d-block
-              label.form-label(for="cryptoInputText2") Ngày kết thúc đến
-              input.form-control.form-control-root#cryptoInputText2(type="date")  
-            
-        .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
-          button.btn.btn-in.w-100(type="submit")
-            img(src="assets/img/search-in-button.png")
-            span Tìm kiếm
+            label.form-label(for="exampleInputEmail1") Ngày kết thúc
+            .mb-3.border.border-1.rounded-3.p-3
+              .mb-3
+                label.form-label(for="cryptoInputText2") Ngày kết thúc từ
+                input.form-control.form-control-root#cryptoInputText2(type="date")      
+              .d-block
+                label.form-label(for="cryptoInputText2") Ngày kết thúc đến
+                input.form-control.form-control-root#cryptoInputText2(type="date")  
+              
+          .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+            button.btn.btn-in.w-100(type="submit")
+              img(src="assets/img/search-in-button.png")
+              span Tìm kiếm

@@ -1,0 +1,18 @@
+mixin headerDetail(title, number)
+  .detail-header.sticky-top.bg-white
+    .d-flex.align-items-center.w-with-padding
+      a(href="#" data-bs-toggle="modal" data-bs-target="#modal-notify" aria-controls="modal-notify")
+        img(src="assets/img/back.png")
+      .flex-grow-1.text-center
+        span.fw-600.font-18.color-bl=title
+          if(number === "hasOrderId") 
+            br  
+            | #17112022-HY-TVP-S6ETIP-234234
+    hr
+    ul.nav.nav-tabs.remove-line-button.d-flex.justify-content-around.align-items-center
+      li.nav-item(role="presentation")
+        button.hotel-add-tabs.active#home-tab(data-bs-toggle="tab", data-bs-target="#home-tab-pane", type="button", role="tab", aria-controls="home-tab-pane", aria-selected="true") Thông tin chỗ nghỉ
+      li.nav-item(role="presentation")
+        button.hotel-add-tabs#profile-tab(data-bs-toggle="tab", data-bs-target="#profile-tab-pane", type="button", role="tab", aria-controls="profile-tab-pane", aria-selected="false") Room Plan (11)
+      li.nav-item(role="presentation")
+        button.hotel-add-tabs#contact-tab(data-bs-toggle="tab", data-bs-target="#contact-tab-pane", type="button", role="tab", aria-controls="contact-tab-pane", aria-selected="false") Hình ảnh

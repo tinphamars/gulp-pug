@@ -1,0 +1,17 @@
+include includes/header.pug
+include includes/style.pug
+
+doctype html
+html(lang="en")
+  
+  +docType("Quản lý danh sách khách sạn | HYO")
+
+  body
+    section.main
+      +headers('Quản lý danh sách khách sạn', '04 khách sạn')
+      include includes/hotel/list.pug
+      include includes/add.pug
+
+    include includes/hotel/search.pug
+    include includes/crypto/modal-confirm-active.pug
+    include includes/js.pug

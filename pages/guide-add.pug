@@ -5,7 +5,7 @@ include includes/style.pug
 doctype html
 html(lang="en")
   
-  +docType("Guide add")
+  +docType("Thêm bài viết mới | HYO")
 
   body
     section.main
@@ -21,12 +21,9 @@ html(lang="en")
 
           .mb-3
             +select('Quốc gia', true)      
-
-          .mb-3
-            +select('Tỉnh/Thành Phố', true)     
           
           .mb-3
-            +img('Hình ảnh Banner', true, 'Dimension (1242 x 464) Max 500KB')   
+            +img('Hình ảnh banner', true, 'Dimension (1242 x 464) Max 500KB')   
 
           .mb-3
             +img('Hình ảnh cover', true, 'Dimension (260 x 260) Max 500KB')   
@@ -35,7 +32,7 @@ html(lang="en")
             +text('Tiêu đề bài viết', true, 'Nhập tiêu bài viết')
           
           .mb-3
-            +textFocus('Nội dung bài viết', true, 'Nhập nội dung bài viết')
+            +textFocus('Nội dung bài viết', false, 'Nhập nội dung bài viết')
     
       .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
         .row

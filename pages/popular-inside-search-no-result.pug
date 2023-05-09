@@ -4,7 +4,7 @@ include includes/style.pug
 doctype html
 html(lang="en")
   
-  +docType("Điểm đến hàng đầu tại QG | HYO")
+  +docType("Tìm kiếm bài viết | HYO")
 
   body
     section.main
@@ -12,6 +12,7 @@ html(lang="en")
       include includes/search-no-result.pug
       include includes/add.pug
 
-    include includes/promo/modal-search.pug
+    include includes/popular/search.pug
+    +modalInOut(false)
     include includes/js.pug
 
