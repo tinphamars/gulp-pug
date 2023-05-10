@@ -195,15 +195,15 @@ mixin inputTextEnd(label, required, placeholder, textEnd, disabled)
       span=textEnd
   
 mixin inputTextHasIconCp(label, required, placeholder, disabled)
-  label.form-label=labeb 
+  label.form-label=label 
     |&nbsp;
     if required
       span.text-danger *
   .form-input-control
     if disabled
-      input.form-control.form-control-root.max-content#cryptoInputText3(type="text", aria-describedby="textHelp", placeholder="7WBvQTiRcqAuybLZutmxTz8u24S")
-    else 
       input.form-control.form-control-root.max-content#cryptoInputText3(type="text", disabled, aria-describedby="textHelp", placeholder="7WBvQTiRcqAuybLZutmxTz8u24S")
+    else 
+      input.form-control.form-control-root.max-content#cryptoInputText3(type="text", aria-describedby="textHelp", placeholder="7WBvQTiRcqAuybLZutmxTz8u24S")
     .img-end-input
       img(src="assets/img/copi-icon.png", alt)
 

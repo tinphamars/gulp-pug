@@ -1,52 +1,58 @@
 .offcanvas.offcanvas-bottom.offcanvas-with-radius(id="offcanvasListPartnerPayment", style="z-index: 1111; height:auto; max-height: 80vh;", tabindex="-1", aria-labelledby="offcanvasBottomLabel", aria-modal="false", role="dialog")
-      .offcanvas-body
-        .text-center.mb-60
-          img(src="assets/img/line-width-50.png", alt="line x")
-          div.mt-3
-            h3.fw-600.font-16.color-bl Đối tác thanh toán
-          //- .d-flex.justify-content-between.align-items-center.mb-3
-          //-   span.color-bl Đã chọn: 3
-          //-   span.text-main.fw-600 Xoá hết
-          //- .mb-3
-          //-   input.form-control.form-control-root#cryptoInputText2(type="text", placeholder="Nhập tên đối tác cần tìm")
+  .offcanvas-body
+    .text-center.mb-60
+      img(src="assets/img/line-width-50.png", alt="line x")
+      div.mt-3
+        h3.fw-600.font-16.color-bl Đối tác thanh toán
+      .d-flex.justify-content-between.align-items-center.mb-3
+        span.color-bl Đã chọn: 3
+        span.text-main.fw-600 Xoá hết
+      .mb-3
+        input.form-control.form-control-root#cryptoInputText2(type="text", placeholder="Nhập tên đối tác thanh toán cần tìm")
 
-          ul.list-group.list-group-flush
-            li.list-group-item 
-              .d-flex.justify-content-between.align-items-center
-                .d-flex.align-items-center
-                  img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
-                  div.text-start
-                    span.fw-600.d-block VietComBank
-                    span.font-12.color-bl Ngân hàng TMCP Ngoại thương Việt Nam
-                .form-check
-                  input.form-check-input#flexCheckDefault(type="checkbox")
-            li.list-group-item 
-              .d-flex.justify-content-between.align-items-center
-                .d-flex.align-items-center
-                  img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
-                  div.text-start
-                    span.fw-600.d-block VietComBank
-                    span.font-12.color-bl Ngân hàng TMCP Ngoại thương Việt Nam
-                .form-check
-                  input.form-check-input#flexCheckDefault(type="checkbox")
-            li.list-group-item 
-              .d-flex.justify-content-between.align-items-center
-                .d-flex.align-items-center
-                  img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
-                  div.text-start
-                    span.fw-600.d-block VietComBank
-                    span.font-12.color-bl Ngân hàng TMCP Ngoại thương Việt Nam
-                .form-check
-                  input.form-check-input#flexCheckDefault(type="checkbox", checked="true")
-            li.list-group-item 
-              .d-flex.justify-content-between.align-items-center
-                .d-flex.align-items-center
-                  img.padding-r-10(src="/assets/img/icon-vcb.png", alt="")
-                  div.text-start
-                    span.fw-600.d-block VietComBank
-                    span.font-12.color-bl Ngân hàng TMCP Ngoại thương Việt Nam
-                .form-check
-                  input.form-check-input#flexCheckDefault(type="checkbox", checked="true")
-        .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
-          button.btn.w-100.btn-blue Lưu  
+      ul.list-group.list-group-flush
+        li.list-group-item 
+          .d-flex.justify-content-between.align-items-center
+            .d-flex.align-items-center
+              span.fw-500.d-block Tất cả
+            .form-check
+              input.form-check-input#flexCheckDefault(type="checkbox")
+        li.list-group-item 
+          .d-flex.justify-content-between.align-items-center
+            .d-flex.align-items-center
+              img.padding-r-10(src="assets/img/icon-vcb.png", alt="")
+              div.text-start
+                span.fw-600.d-block VietComBank
+                span.font-12.color-bl Ngân hàng TMCP Ngoại thương Việt Nam
+            .form-check
+              input.form-check-input#flexCheckDefault(type="checkbox")
+        li.list-group-item 
+          .d-flex.justify-content-between.align-items-center
+            .d-flex.align-items-center
+              img.padding-r-10(src="assets/img/icon-vcb.png", alt="")
+              div.text-start
+                span.fw-600.d-block VietComBank
+                span.font-12.color-bl Ngân hàng TMCP Ngoại thương Việt Nam
+            .form-check
+              input.form-check-input#flexCheckDefault(type="checkbox")
+        li.list-group-item 
+          .d-flex.justify-content-between.align-items-center
+            .d-flex.align-items-center
+              img.padding-r-10(src="assets/img/icon-vcb.png", alt="")
+              div.text-start
+                span.fw-600.d-block VietComBank
+                span.font-12.color-bl Ngân hàng TMCP Ngoại thương Việt Nam
+            .form-check
+              input.form-check-input#flexCheckDefault(type="checkbox", checked="true")
+        li.list-group-item 
+          .d-flex.justify-content-between.align-items-center
+            .d-flex.align-items-center
+              img.padding-r-10(src="assets/img/icon-vcb.png", alt="")
+              div.text-start
+                span.fw-600.d-block VietComBank
+                span.font-12.color-bl Ngân hàng TMCP Ngoại thương Việt Nam
+            .form-check
+              input.form-check-input#flexCheckDefault(type="checkbox", checked="true")
+    .fixed-bottom.bg-white.shadow-of-button-fixed.w-with-padding.padding-10-0
+      button.btn.w-100.btn-blue Lưu  
           

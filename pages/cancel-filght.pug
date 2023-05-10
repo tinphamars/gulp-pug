@@ -51,13 +51,13 @@ html(lang="en")
           .modal-body.color-bl(style="padding: 16px")
             img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
             .text-center.mb-3
-              span.text-danger.fw-600.font-18 Hủy chuyến bay
+              span.text-danger.fw-600.font-18 Hủy chuyến bay nội bộ
             .text-center.mb-3
               span.fw-600.font-16 Bạn có chắc muốn huỷ chuyến bay này không?
             .mb-2
               span 
                 span.fw-600 *Lưu ý:&nbsp;
-                | Bạn cần thực hiện thao tác huỷ chuyến bay trực tiếp trên trang đối tác trước khi xác nhận huỷ chuyến bay tại đây.ợp đã hủy chuyến bay trực tiếp trên trang đối tác. Tính năng góp phần đồng bộ dữ liệu trạng thái trên hệ thống.
+                | Bạn cần thực hiện thao tác huỷ chuyến bay trực tiếp trên trang đối tác trước khi xác nhận huỷ chuyến bay tại đây.
             .mb-2 
               img(src="assets/img/exclamation-v2.png", alt="")
               span &nbsp;Lệ phí hủy&nbsp;
@@ -113,7 +113,9 @@ html(lang="en")
               .mb-3  
                 span.color-gray Bạn vừa thực hiện cập nhật trạng thái huỷ chuyến bay 
               .d-block 
-                span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN) | 19h30 24/12/2022
+                span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN) 
+                  br
+                  | 19h30 24/12/2022
     
     .modal.fade#modalCancelInSuccessOut(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
       .modal-dialog.modal-dialog-centered.modal-sm-custom
@@ -128,7 +130,9 @@ html(lang="en")
               .mb-3  
                 span Bạn vừa huỷ thành công chuyến bay
               .d-block 
-                span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN) 19h30 24/12/2022.
+                span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN)
+                  br
+                  | 19h30 24/12/2022.
 
     .modal.fade#modalCancelInFail(tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true")
       .modal-dialog.modal-dialog-centered.modal-sm-custom
@@ -141,12 +145,12 @@ html(lang="en")
               .mb-3  
                 span.text-danger.fw-600.font-18 Hủy chuyến bay thất bại !
               .mb-3  
-                span Bạn vừa huỷ thành công chuyến bay
+                span Bạn vừa hủy không thành công chuyến bay
               .mb-3
                 span.fw-600.font-16 Hà Nội (HAN) - Hồ Chí Minh (SGN)
                   <br>
                   | 19h30 24/12/2022.
               .d-block   
-                span Bạn vừa huỷ thành công chuyến bay
+                span Vui lòng kiểm tra lại điều kiện hủy vé & thử lại sau ít phút
     include includes/js.pug
 

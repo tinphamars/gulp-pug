@@ -1085,7 +1085,7 @@ body {
 }
 .nav-tabs.remove-line-button {
   border-bottom: none;
-} 
+}
 .btn-marker {
   padding: 9px 15px;
   background: #0770cd;
@@ -1100,4 +1100,10 @@ body {
   padding: 0 5px 0 10px;
 }
 
+.list-group-item.list-group-header {
+  background: #f2f9ff;
+}
 
+.room-add-block {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}

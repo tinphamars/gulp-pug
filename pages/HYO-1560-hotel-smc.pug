@@ -41,21 +41,21 @@ html(lang="en")
           .modal-body.color-bl(style="padding: 16px")
             img.img-close-modal(src="assets/img/cancle.png", alt="" data-bs-dismiss="modal" aria-label="Close")
             .text-center.mb-3
-              img.padding-r-10(src="assets/img/refund-svg.png", alt="")
+              img.padding-r-10(src="assets/img/confirmed.png", alt="")
               span.color-bl.fw-600.font-18 Xác nhận hoàn tiền
             .mb-3
               span Bạn vui lòng kiểm tra các trường thông tin nhập liệu. Hãy chắc chắn rằng thông tin đã chính xác trước khi xác nhận hoàn tiền cho khách hàng.
             .mb-3
-              +inputTextHasIconCp('Địa chỉ ví nhận', true, "7WBvQTiRcqAuybLZutmxTz8u24S", true)
+              +inputTextHasIconCp('Địa chỉ ví nhận', false, "7WBvQTiRcqAuybLZutmxTz8u24S", true)
             .mb-3
               +inputTextHasIconCp('Memo', false, "D7CEVb67WBv", true )
             .mb-3
-              +inputTextEnd('Số tiền hoàn trả', true, 100.000, 'PayN', true)
+              +inputTextEnd('Số tiền hoàn trả', false, 100.000, 'PayN', true)
             .mb-3
-              +textDisable('Network', true, "tron")
+              +textDisable('Network', false, "tron")
 
             .d-flex.justify-content-between.mt-4.fw-600
               button.btn.btn-outline-secondary.btn-confirm-crypto(data-bs-dismiss="modal" aria-label="Close") Quay lại
-              button.btn.btn-danger.btn-confirm-crypto Xác nhận
+              button.btn.btn-blue.btn-confirm-crypto Xác nhận
 
     include includes/js.pug
